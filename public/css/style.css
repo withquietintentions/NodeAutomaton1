@@ -42,6 +42,11 @@ form {
 input{
   height:50px; font-size: 35px;
 }
+#responseMessage {
+font-size: 25px;
+color: red;
+
+}
 
 button {
   display: inline-block;

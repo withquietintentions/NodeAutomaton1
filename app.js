@@ -6,6 +6,9 @@ var express = require ("express");//module that allows this to work as a server 
 var cors = require("cors");
 var app = express();
 
+app.use(express.static("./public"));
+
+app.use(cors());
 
 app.listen(3000);//tells me I can go to localhost 3000 to find my page in the browser
 

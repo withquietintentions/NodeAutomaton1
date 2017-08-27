@@ -1,23 +1,40 @@
 //Automaton
-$(document).ready(function () {
+
+///starts jquey listening
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
     
-    $('form').submit(function(e)){
-            e.preventDefault();
-            $.post()
-    }
+//what happens on click of submit button
+
+//get input and save as a variable
+funtion onSubmit(input) {
 
 
-    var newGuess = $("<p>");//makes paragraph
-    newGuess.append("<em>TRY AGAIN</em>");
-    $("#tryAgain").html(newGuess);//puts paragraph in a div with the id guess
+}
+//append this variable to a list
 
-    //make an on click for my button to append to a list 
-    $("#submit").click( function(){
-        $("#hit_button").prepend("Good Try!");
+//count the items in a list to see the frequency of a word and make a topten list
+
+//check the saved varaible against the top ten list
+
+//if equal 
+    //return a yes in the responseMessage
+    //send message to photon to move motor
+
+//if not 
+    //retun a try again in the responseMessage
+
+
+
+
+    $("#submit").click(function(){
+
+        $("#responseMessage").prepend("Good Try!");
 
     });
+  
 
-});
 
 //     $.getJSON('/guesses-api', printTerms);
 //     $('form').submit(function (e) {
