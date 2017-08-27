@@ -4,14 +4,17 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 });
-    
+
 //what happens on click of submit button
+//submit on button
+$("#submission"). submit(function( event ) {
+    alert ("Handler for .submit() called.");
+    event.preventDefault();
+
+});
 
 //get input and save as a variable
-funtion onSubmit(input) {
 
-
-}
 //append this variable to a list
 
 //count the items in a list to see the frequency of a word and make a topten list
@@ -28,11 +31,11 @@ funtion onSubmit(input) {
 
 
 
-    $("#submit").click(function(){
+    // $("#submit").click(function(){
 
-        $("#responseMessage").prepend("Good Try!");
+    //     $("#responseMessage").prepend("Good Try!");
 
-    });
+    // });
   
 
 
