@@ -1,0 +1,40 @@
+<!-- Automaton -->
+<!-- New code -->
+
+<!-- Old code -->
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css"/> <!-- style sheet -->
+    <title>Automaton Node</title>
+</head>
+<body>
+     <!-- div of container and background -->
+    <div style="position: relative; margin-top: 100px; auto; overflow: hidden; text-align: center; padding-left: 25px;">
+      
+          <!-- div instructions -->
+        <div><h1>What would you remove from the world?</h1><p>Type into the form something you would like to remove from the world and we will see if we can do that...</p></div> 
+          
+         <!--  div of response to entry -->
+        <div id = "responseMessage"></div><!-- where try again or yes text goes -->
+            
+           <!--  div of form and button -->
+            <form>
+                <input type="text" id="guess" name="guess" size= "15" placeholder="one word" required/> 
+                <!-- guess is the ID of the user input -->
+                <button id="submit">Remove</button> 
+                <!-- submit is the ID of the button -->
+            </form>
+        </div>
+
+    </div> 
+    <!-- scripts to link to --> 
+    <script src="/js/jquery-3.2.1.min.js"></script> <!-- just a downloaded file of jquery-->
+    <script src="/js/dictionary.js"></script>
+    <script src="/data/guesses.js"></script> 
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+/*Automaton*/
+   body {
+          background: url(../blackimg.jpg) no-repeat;
+        
+          }
+   h1 {
+          color: white;
+          text-align: left;
+          font-weight: bold;
+          font-family: arial;
+          font-size: 32px;
+          margin: 50px 10px 10px 10px; 
+      }
+   p {
+
+          background: url(../terracotta2.jpg) no-repeat;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          display: block;
+          background-position: left top;
+          padding-left: 30px;
+          font-weight: bold;
+          font-family: arial;
+          font-size: 18px;
+          width: 600px;
+      }
+
+form {
+  display: inline-block;
+    color: white;
+    padding: 1em;
+    width: 600px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+
+input{
+  height:50px; font-size: 35px;
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #C56622;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+input{
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+button {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background-color: transparent;
+    outline: none;
+    border: solid 1px;
+    color: white;
+}
+
+button:hover {
+    color: #C56622;
+}
+
+
+

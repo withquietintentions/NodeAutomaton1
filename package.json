@@ -1,0 +1,31 @@
+{
+  "name": "automaton",
+  "version": "1.0.0",
+  "description": "An artwork.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withquietintentions/NodeAutomaton1.git"
+  },
+  "keywords": [
+    "art",
+    "pandoras",
+    "box",
+    "phobot"
+  ],
+  "author": "Zoe McCloskey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/withquietintentions/NodeAutomaton1/issues"
+  },
+  "homepage": "https://github.com/withquietintentions/NodeAutomaton1#readme"
+}
