@@ -47,10 +47,35 @@ app.post("/guess", function(req, res) {
         console.log(counter);
         var freqs = getTopTenFromCounter(counter);
         console.log(freqs);
+        var numbers = Object.keys(freqs).map(Number).sort().reverse();
+        console.log(numbers);
+        var result = checkTopWords(numbers, freqs, guessCleanedUp);
+        if (result != null) {
+          console.log("removed!: ", result);
+        }
+
       })
     });
   }
 );
+
+function checkTopWords(numbers, freqs, guessCleanedUp) {
+  var topWords = 5;
+  var tmp = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    var list = freqs[numbers[i]];
+    for (var j = 0; j < list.length; j++) {
+      if (guessCleanedUp == list[j]) {
+        return guessCleanedUp;
+      }
+      if (topWords < 0) {
+        return null;
+      }
+      topWords -= 1;
+    }
+  }
+  return null;
+}
 
 function getCounterDictionary(docs) {
   for (var i = 0; i < docs.length; i++) {
