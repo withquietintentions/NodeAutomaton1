@@ -43,24 +43,26 @@ app.post("/guess", function(req, res) {
           console.log(err);
           return;
         } 
-        for (var i = 0; i < docs.length; i++) {
-          var val = docs[i].guess;
-          if (counter[val] == null) {
-            counter[val] = 1;
-          } else {
-            counter[val] +=1;
-          }
-          console.log(counter);
-          var freqs = getTopTenFromCounter(counter);
-          console.log(freqs);
-          
-
-        }
+        var counter = getCounterDictionary(docs);
+        console.log(counter);
+        var freqs = getTopTenFromCounter(counter);
+        console.log(freqs);
       })
     });
   }
 );
 
+function getCounterDictionary(docs) {
+  for (var i = 0; i < docs.length; i++) {
+    var val = docs[i].guess;
+    if (counter[val] == null) {
+      counter[val] = 1;
+    } else {
+      counter[val] +=1;
+    }
+  }
+  return counter;
+}
 
 function getTopTenFromCounter(counter) {
   var freqs = {};
