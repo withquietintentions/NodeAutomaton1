@@ -45,17 +45,27 @@ app.post("/guess", function(req, res) {
         } 
         var counter = getCounterDictionary(docs);
         console.log(counter);
+
         var freqs = getTopTenFromCounter(counter);
         console.log(freqs);
+
         var numbers = Object.keys(freqs).map(Number).sort().reverse();
         console.log(numbers);
+
         var result = checkTopWords(numbers, freqs, guessCleanedUp);
         if (result != null) {
           console.log("removed!: ", result);
+          // if result is non null then there is a match
+          res.end(guess);
+          return;
+        } else {
+          // if no match
+          res.end(null);
+          return;
         }
-
       })
     });
+    res.end(null);
   }
 );
 
