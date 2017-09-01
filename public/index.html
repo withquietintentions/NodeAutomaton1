@@ -21,10 +21,10 @@
         <div id = "responseMessage">War has been removed from the world</div><!-- where try again or yes text goes -->
             
            <!--  div of form and button -->
-            <form id = "submission" action = "destination.html">
+            <form id = "submission">
                 <input type="text" id="guess" name="guess" size= "15" placeholder="one word" required/> 
                 <!-- guess is the ID of the user input -->
-                <button type= "submit" id="submit">Remove</button> 
+                <button onclick="dictionary.onRemove()" type= "submit" id="submit">Remove</button> 
                 <!-- submit is the ID of the button -->
             </form>
         </div>
@@ -33,7 +33,6 @@
     <!-- scripts to link to --> 
     <script src="/js/jquery-3.2.1.min.js"></script> <!-- just a downloaded file of jquery-->
     <script src="/js/dictionary.js"></script>
-    <script src="/data/guesses.js"></script> 
 
 </body>
 </html>
