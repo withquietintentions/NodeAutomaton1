@@ -5,8 +5,8 @@
 // var cors = require("cors");
 // var app = express();
 
-// var topten = [
-// ];
+var topten = [
+"war", "flowers", "death"];
 
 // app.use(function(req, res, next) {
 // 	console.log(`${req.method} request for '${req.url}'`);
