@@ -9,7 +9,7 @@ var cors  = require("cors"); var app = express();
 
 
 var Datastore = require('nedb');
-
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static("./public"));
 app.use(cors());
 
@@ -122,7 +122,9 @@ function getTopTenFromCounter(counter) {
   return freqs;
 }
 
-app.listen(3000);//tells me I can go to localhost 3000 to find my page in the browser
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});//tells me I can go to localhost 3000 to find my page in the browser
 
 console.log("Express app running on port 3000");//terminal log 
 
