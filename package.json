@@ -18,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower install && grunt build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,7 @@
     "phobot"
   ],
   "author": "Zoe McCloskey",
-  "license": "MIT",
+  "license": "(MIT OR Apache-2.0)",
   "bugs": {
     "url": "https://github.com/withquietintentions/NodeAutomaton1/issues"
   },
