@@ -11,7 +11,8 @@
     "nedb": "^1.8.0",
     "particle-api-js": "^6.5.0",
     "engines": {
-    "node": "6.11.1"
+    "node": "6.11.1",
+    "npm": "3.10.10"
   }
   },
   "devDependencies": {},
