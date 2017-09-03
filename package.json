@@ -2,7 +2,6 @@
   "name": "automaton",
   "version": "1.0.0",
   "description": "An artwork.",
-  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
@@ -19,7 +18,6 @@
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
-    "postinstall": "bower install && grunt build"
   },
   "repository": {
     "type": "git",
