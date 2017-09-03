@@ -16,9 +16,9 @@ app.use(cors());
 //TESTING PARTICLE IN HERE
 //responses
 
-var apikeys = require ('./apikeys');
-//console.log ('new token ' + apikeys.token);
-console.log("token in app: " + apikeys.token);
+// var apikeys = require ('./apikeys');
+
+// console.log("token in app: " + apikeys.token);
 
 ///END OF PARICLE TEST
 
