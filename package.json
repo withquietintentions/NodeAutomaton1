@@ -9,12 +9,13 @@
     "express": "^4.15.4",
     "express-json": "^1.0.0",
     "nedb": "^1.8.0",
+    "openssl": "^1.1.0",
     "particle-api-js": "^6.5.0",
-    "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.10"
-  }
   },
+   "engines": {
+      "node": "6.11.1",
+      "npm": "3.10.10"
+    },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
