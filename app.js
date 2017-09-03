@@ -1,5 +1,5 @@
 // Automaton
-// new code
+// Node
 var http = require('http');
 var fs = require('fs');
 
@@ -116,7 +116,7 @@ function getTopTenFromCounter(counter) {
 app.listen(3000);//tells me I can go to localhost 3000 to find my page in the browser
 
 console.log("Express app running on port 3000");//terminal log 
-console.log("this");
+
 
 module.exports = app;
 

@@ -67,7 +67,24 @@ margin-bottom:4%;
 text-align: center;
 
 }
-
+#questionsFrame{
+font-size: 4vw;
+color: #00FDFF;
+font-family: arial;
+margin-bottom:4%;
+text-align: center;
+}
+a {
+    color: red;
+}
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+/* selected link */
+a:active {
+    color: blue;
+}
 button {
   display: inline-block;
   border-radius: 4px;

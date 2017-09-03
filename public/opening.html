@@ -1,5 +1,5 @@
 <!-- Automaton -->
-<!-- REMOVE GAME -->
+<!--Opening GAME -->
 
 <!DOCTYPE html>
 <html>
@@ -7,25 +7,19 @@
    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css"/> <!-- style sheet -->
-    <title>Automaton Remove</title>
+    <title>Automaton to Open</title>
 </head>
 <body>
      <!-- div of container and background -->
     <div id ="container">
       
           <!-- div instructions -->
-        <div><h1>What would you remove from the world?</h1><p>Type into the form something you would like to remove from the world and we will see if we can do that...</p></div> 
+        <div id= "question"><h1>Pandora was created by Hephaistos, the same creator who built automatons.</h1><p>Would you like to know what Automatons are?</p></div> 
           
          <!--  div of response to entry -->
-        <div id = "responseMessage"></div><!-- where try again or yes text goes -->
+        <div id = "questionsFrame"></div><!-- where try again or yes text goes -->
             
            <!--  div of form and button -->
-            <form id = "submission">
-                <input type="text" id="guess" name="guess" size= "15" placeholder="one word" required/> 
-                <!-- guess is the ID of the user input -->
-                <button onclick="dictionary.onRemove()" type="button" id="submit">Remove</button> 
-                <!-- submit is the ID of the button -->
-            </form>
         </div>
 
     </div> 
@@ -34,4 +28,3 @@
     <script src="/js/dictionary.js"></script>
 </body>
 </html>
-
