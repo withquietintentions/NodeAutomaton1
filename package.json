@@ -9,7 +9,10 @@
     "express": "^4.15.4",
     "express-json": "^1.0.0",
     "nedb": "^1.8.0",
-    "particle-api-js": "^6.5.0"
+    "particle-api-js": "^6.5.0",
+    "engines": {
+    "node": "6.11.1"
+  }
   },
   "devDependencies": {},
   "scripts": {
