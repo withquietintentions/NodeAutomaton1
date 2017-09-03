@@ -13,6 +13,15 @@ var Datastore = require('nedb');
 app.use(express.static("./public"));
 app.use(cors());
 
+//TESTING PARTICLE IN HERE
+//responses
+
+var apikeys = require ('./apikeys');
+//console.log ('new token ' + apikeys.token);
+console.log("token in app: " + apikeys.token);
+
+///END OF PARICLE TEST
+
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.json() );       // to support JSON-encoded bodies

@@ -1,4 +1,4 @@
-
+//javascript
 var dictionary = {
   onRemove: function(ev) {
     var guess = $("#guess").val();
