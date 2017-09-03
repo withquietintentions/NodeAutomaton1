@@ -2,6 +2,7 @@
   "name": "automaton",
   "version": "1.0.0",
   "description": "An artwork.",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
