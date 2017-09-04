@@ -7,6 +7,12 @@
 
 
 }
+
+p#clickableoption {
+color:mediumaquamarine;
+
+}
+
 html { 
   background: url(../blackimg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -16,25 +22,16 @@ html {
 }
    
    h1 {
-          color: white;
+          color: goldenrod;
           text-align: left;
           font-weight: bold;
           font-family: arial;
           font-size: 4vw;
         
       }
-   p {
+p {
 
-          background: url(../terracotta2.jpg) no-repeat center center fixed; 
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          display: block;
-          background-position: left top;
+    color: #C96A16;
          
           font-weight: bold;
           font-family: arial;
@@ -83,7 +80,7 @@ a:hover {
 }
 /* selected link */
 a:active {
-    color: blue;
+    color: ;
 }
 button {
   display: inline-block;
