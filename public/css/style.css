@@ -5,14 +5,19 @@
  width: 87%;
  padding-left: 5%;
 
+          font-weight: bold;
+          font-family: arial;
+          font-size: 2vw;
 
 }
 
 p#clickableoption {
-color:mediumaquamarine;
+color:steelblue;
 
 }
-
+#lose_message{
+  color:lightcoral;
+}
 html { 
   background: url(../blackimg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -33,9 +38,6 @@ p {
 
     color: #C96A16;
          
-          font-weight: bold;
-          font-family: arial;
-          font-size: 2vw;
         
       }
 
