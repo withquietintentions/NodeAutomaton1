@@ -1,6 +1,10 @@
 
 # Created by https://www.gitignore.io/api/node,macos
 
+#Apikeys
+
+apikeys.js
+
 ### macOS ###
 *.DS_Store
 .AppleDouble

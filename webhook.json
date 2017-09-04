@@ -1,0 +1,23 @@
+
+{
+	"event": "movemotor",
+	"url": "https://automaton-urn.herokuapp.com/",
+	"requestType": "GET",
+	"mydevices": true,
+	"auth": {
+		"username": "zmccloskey",
+		"password": "Use an actual password."
+	}
+// $.ajax({
+//   url: 'getTwitterFollowers.php',
+//   type: 'GET',
+//   data: 'twitterUsername=jquery4u',
+//   success: function(data) {
+// 	//called when successful
+// 	$('#ajaxphp-results').html(data);
+//   },
+//   error: function(e) {
+// 	//called when there is an error
+// 	//console.log(e.message);
+//   }
+// });

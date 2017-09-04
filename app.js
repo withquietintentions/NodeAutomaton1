@@ -6,7 +6,9 @@ var fs = require('fs');
 var express = require ("express");//module that allows this to work as a server that finds all dependent files
 var json = require('express-json');
 var cors  = require("cors"); var app = express();
-
+var Particle = require('particle-api-js');
+var particle = new Particle();
+var token
 
 var Datastore = require('nedb');
 app.set('port', (process.env.PORT || 3000));
@@ -15,10 +17,26 @@ app.use(cors());
 
 //TESTING PARTICLE IN HERE
 //responses
+//var apikeys = require ('./apikeys');
 
-// var apikeys = require ('./apikeys');
+//console.log("token in app: " + apikeys.token);
+particle.login({username: 'zmccloskey@gmail.com', password: 'Charming123'}).then(
+  function(data) {
+    token = data.body.access_token;
+    return token;
+  },
+  function (err) {
+    console.log('Could not log in.', err);
+  }
+);
+var fnPr = particle.callFunction({ deviceId: '410032000b47343138333038', name: 'y', argument: 'D0:HIGH', auth: token });
 
-// console.log("token in app: " + apikeys.token);
+fnPr.then(
+  function(data) {
+    console.log('Function called succesfully:', data);
+  }, function(err) {
+    console.log('An error occurred:', err);
+  });
 
 ///END OF PARICLE TEST
 
