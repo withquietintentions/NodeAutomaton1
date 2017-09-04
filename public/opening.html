@@ -13,20 +13,14 @@
      <!-- div of container and background -->
     <div id ="container">
       
-          <!-- div instructions -->
-        <div id= "question"><h1>Pandora was created by Hephaistos, the same creator who built automatons.</h1><p>Would you like to know what Automatons are?</p></div> 
+          <!-- div question -->
+        <div id= "question_synopsis"><h1>sample question</div> 
           
-         <!--  div of response to entry -->
-        <div id = "questionsFrame"></div><!-- where try again or yes text goes -->
+         <!--  div of possible responses -->
+        <div id = "options"> sample option<p id= "clickableoption">sample option in p tag</p></div><!-- where try again or yes text goes -->
             
-           <!--  div of form and button -->
-       
-        
-        <p>Click the button to replace this text: </p>
-        <p id="replace">cat</p>
-       
-
-        <button onclick="myFunction()">Try it</button> 
+           <!--  div for lose message -->
+       <div id = "lose_message"></div>
 
     </div> 
 
@@ -34,14 +28,8 @@
 <!-- scripts to link to --> 
     <script src="/js/jquery-3.2.1.min.js"></script> <!-- just a downloaded file of jquery-->
     <script src="/js/dictionary.js"></script>
+    <script src="/db/openUrnText.js"></script>
     <!-- replace text script -->
-    <script>
-function myFunction() {
-    var str = document.getElementById("replace").innerHTML; 
-    var res = str.replace("cat", "dog");
-    document.getElementById("replace").innerHTML = res;
-}
-</script>
 
 </html>
 
