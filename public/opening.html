@@ -20,11 +20,34 @@
         <div id = "questionsFrame"></div><!-- where try again or yes text goes -->
             
            <!--  div of form and button -->
-        </div>
+       
+        
+        <p>Click the button to replace this text: </p>
+        <p id="replace">cat</p>
+       
+
+        <button onclick="myFunction()">Try it</button> 
 
     </div> 
-    <!-- scripts to link to --> 
+
+</body>
+<!-- scripts to link to --> 
     <script src="/js/jquery-3.2.1.min.js"></script> <!-- just a downloaded file of jquery-->
     <script src="/js/dictionary.js"></script>
+    <!-- replace text script -->
+    <script>
+function myFunction() {
+    var str = document.getElementById("replace").innerHTML; 
+    var res = str.replace("cat", "dog");
+    document.getElementById("replace").innerHTML = res;
+}
+</script>
+
+</html>
+
+<body>
+
+
+
 </body>
 </html>
