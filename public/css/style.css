@@ -28,6 +28,11 @@ font-size: 3vw;
 color:steelblue;
 display: inline-block;
 }
+#optionsA:hover {
+
+color:red;
+
+}
 #optionsN {
 font-weight: bold;
 font-family: arial;
@@ -145,5 +150,7 @@ button:hover {
     color: #C56622;
 }
 
-
+h2:hover {
+    color: red;
+}
 

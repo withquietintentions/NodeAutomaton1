@@ -2,7 +2,7 @@
 var statements_lose_version = [  
 	{"question" : { 
 		"synopsis": "Do you want to know what automatons are?",
-		"optionsA" : [ "yes"],
+		"optionsA" : [ "yes","maybe"],
 		"optionsN" : [ "no"],
 		"lose_message": "Atomatons are metal statues of animal, men and monsters, from ancient Greek Myths. The best crafted ones can think and feel like humans. You lose and so does all humanity"
 	}}, 
@@ -40,15 +40,15 @@ window.onload = function(question_num) {
             $('#optionsA').text(optionsA.join('\r\n'));//reads all in list
             $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
              $('#optionsA').click(function(){
-             alert("The paragraph was clicked.");
+             alert("optionsA was clicked.");
     		});
 
         }
     }
     //hover for links in options
-$(".hover").mouseover(function() {
-    $(this).find(" > div").css("color", "cyan");
-}).mouseout(function() {
-    $(this).find(" > div").css("color","steelblue");
-});;
+// $(".hover").mouseover(function() {
+//     $(this).find(" > div").css("color", "cyan");
+// }).mouseout(function() {
+//     $(this).find(" > div").css("color","steelblue");
+// });;
 
