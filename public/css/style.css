@@ -14,22 +14,30 @@ font-family: arial;
 font-size: 3vw;
 
 }
+#urn_opening {
+font-weight: bold;
+font-family: arial;
+font-size: 3vw;
+color:pink;
+line-height: 2em;
+display: inline-block;
 
+}
 #lose_message{
   font-weight: bold;
 font-family: arial;
 font-size: 3vw;
 color:coral;
 }
-#optionsA {
+#optionsA, #optionsN {
 font-weight: bold;
 font-family: arial;
 font-size: 3vw;
 color:steelblue;
 display: inline-block;
+padding: 5%;
 }
-#optionsA:hover {
-
+#optionsA:hover, #optionsN:hover {
 color:red;
 
 }
@@ -40,14 +48,7 @@ color:red;
 #play_again:hover{
   color:antiquewhite;
 }
-#optionsN {
-font-weight: bold;
-font-family: arial;
-font-size: 3vw;
-color:steelblue;
-display: inline-block;
-padding:5%;
-}
+
 #question_synopsis{
 font-weight: bold;
 font-family: arial;

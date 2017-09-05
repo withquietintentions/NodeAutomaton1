@@ -36,7 +36,7 @@ window.onload = function(question_num) {
         printQuestion();
 
         function printQuestion() {
-            document.getElementById('question_synopsis').innerHTML = answer;
+            $('#question_synopsis').text(answer);
             $('#optionsA').text(optionsA.join('\r\n'));//reads all in list but joins them
             $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
              $('#optionsA').click(function(){//clicking to know more
@@ -44,19 +44,28 @@ window.onload = function(question_num) {
              	$('#optionsA').hide();
              	$('#optionsN').hide();
         		$("#lose_message").text(lose_message).show();
-        		$("#play_again").text("Please wait for the Urn to Open then Play Again?").show();
+        		$("#urn_opening").text("Urn will open...").show();
+        		//send event here for motor to open by 1
+        		//tigger breaking sound here
+        		$("#play_again").text("Play Again?").show();
         		$("#play_again").click(function(){
-        			var question_num=0;
         			$("#lose_message").hide();
-
-
+        			$("#urn_opening").text("Urn will open...").hide();
+        			$("#play_again").text("Play Again?").hide();
+        			//move foward one question
         			});
+        		question_num ++;
+        		return question_num;
+
+        		
     		});
 
         }
     }
    
-
+// $.each(array, function(index, value){
+//     $('.element').html( $('.element').html() + '<span>' + value +'</span>')
+// });
     //hover for links in options
 // $(".hover").mouseover(function() {
 //     $(this).find(" > div").css("color", "cyan");
