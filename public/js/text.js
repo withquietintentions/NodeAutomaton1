@@ -1,19 +1,19 @@
 
 var statements_lose_version = [  
 	{"question" : { 
-		"synopsis": "Pandora was created by Hephaistos, the same creator who built atomatons? Do you want to know what atomatons are?",
-		"optionsA" : [ "yes" ],
-		"optionsN" : [ "maybe", "no", "why"],
+		"synopsis": "Do you want to know what atomatons are?",
+		"optionsA" : [ "yes"],
+		"optionsN" : [ "no"],
 		"lose_message": "Atomatons are metal statues of animal, men and monsters, from ancient Greek Myths. The best crafted ones can think and feel like humans. You lose and so does all humanity"
 	}}, 
 	{"question" : {
 		"synopsis": "Originally pandoras box was not a box. Was it a vase, a jar, or a basket?",
-		"options": [ ("YES", ["vase", "jar", "basket"]), ("NO",[""])],
+		"options": [ "vase", "jar", "basket"],
 		"lose_message": "It was a JAR! You lose and so does humanity"
 	}}, 
 	{"question" : {
 		"synopsis": "The main trouble with cyborgs, of course , is that they are the illegitimate offspring of militarism and patriarchal capitalism...But illegitimate offspring are... Open Pandoras box to read the rest (open/No)",
-		"options": [("YES", ["open"]), ("NO",["No"]) ],
+		"options": ["open"],
 		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto. All of humanity is doomed and you lose."
 	}} 
 ];
@@ -37,9 +37,8 @@ window.onload = function(question_num) {
 
         function printQuestion() {
             document.getElementById('question_synopsis').innerHTML = answer;
-            $('#options').text(optionsN.join('\r\n'));
-            //for (i =0; i < optionsN.length; i++) {
-            //document.getElementById('options').innerHTML = optionsN[i];
+            $('#optionsA').text(optionsA.join('\r\n'));//reads all in list
+            $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
         }
     }
 

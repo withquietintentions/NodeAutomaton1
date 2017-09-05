@@ -1,7 +1,7 @@
 /*Automaton*/
 
 .container  {
- padding-top: 30%;
+ padding-top: 25%;
  width: 87%;
  padding-left: 5%;
 
@@ -21,12 +21,20 @@ font-family: arial;
 font-size: 3vw;
 color:coral;
 }
-#options {
+#optionsA {
 font-weight: bold;
 font-family: arial;
 font-size: 3vw;
 color:steelblue;
-
+display: inline-block;
+}
+#optionsN {
+font-weight: bold;
+font-family: arial;
+font-size: 3vw;
+color:steelblue;
+display: inline-block;
+padding:5%;
 }
 #question_synopsis{
 font-weight: bold;
