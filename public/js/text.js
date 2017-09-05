@@ -2,7 +2,8 @@
 var statements_lose_version = [  
 	{"question" : { 
 		"synopsis": "Pandora was created by Hephaistos, the same creator who built atomatons? Do you want to know what atomatons are?",
-		"options" : [ "yes", "no", ],
+		"optionsA" : [ "yes" ],
+		"optionsN" : [ "maybe", "no", "why"],
 		"lose_message": "Atomatons are metal statues of animal, men and monsters, from ancient Greek Myths. The best crafted ones can think and feel like humans. You lose and so does all humanity"
 	}}, 
 	{"question" : {
@@ -21,21 +22,23 @@ var statements_lose_version = [
 var statements = statements_lose_version;
 var question_num = 0;
 var answer = (statements[question_num]["question"]["synopsis"]); //is a string
-var options = statements[question_num]["question"]["options"];// options is a list with a dictionary in it
+var optionsA = statements[question_num]["question"]["optionsA"];// options is a list 
+var optionsN = statements[question_num]["question"]["optionsN"];// options is a list 
 var lose_message = statements[question_num]["question"]["lose_message"];// is a string
 var total_questions = statements_lose_version.length;
 var score= 0;
 var lets_play = null;
 var play = true ;
 
+//on load of page
+window.onload = function(question_num) {
 
-window.onload = function() {
+        printQuestion();
 
-        what();
-
-        function what() {
+        function printQuestion() {
             document.getElementById('question_synopsis').innerHTML = answer;
-            document.getElementById('options').innerHTML = options[0] + " " + options[1];
-        };
-
+            for (i =0; i < optionsN.length; i++) {
+            document.getElementById('options').innerHTML = optionsN[i];
+        }
     }
+}

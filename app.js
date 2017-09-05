@@ -11,8 +11,8 @@ var particle = new Particle();
 var token
 
 var Datastore = require('nedb');
-app.set('port', (process.env.PORT || 3000));
-app.use(express.static("./public"));
+app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
+app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
 
 //TESTING PARTICLE IN HERE
