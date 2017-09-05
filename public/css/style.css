@@ -33,6 +33,13 @@ display: inline-block;
 color:red;
 
 }
+#play_again{
+  color:white;
+  line-height: 2.5em;
+}
+#play_again:hover{
+  color:antiquewhite;
+}
 #optionsN {
 font-weight: bold;
 font-family: arial;

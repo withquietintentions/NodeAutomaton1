@@ -39,8 +39,18 @@ window.onload = function(question_num) {
             document.getElementById('question_synopsis').innerHTML = answer;
             $('#optionsA').text(optionsA.join('\r\n'));//reads all in list but joins them
             $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
-             $('#optionsA').click(function(){
+             $('#optionsA').click(function(){//clicking to know more
+             	$('#question_synopsis').hide();
+             	$('#optionsA').hide();
+             	$('#optionsN').hide();
         		$("#lose_message").text(lose_message).show();
+        		$("#play_again").text("Please wait for the Urn to Open then Play Again?").show();
+        		$("#play_again").click(function(){
+        			var question_num=0;
+        			$("#lose_message").hide();
+
+
+        			});
     		});
 
         }
