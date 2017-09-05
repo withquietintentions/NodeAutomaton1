@@ -5,18 +5,34 @@
  width: 87%;
  padding-left: 5%;
 
-          font-weight: bold;
-          font-family: arial;
-          font-size: 2vw;
+
+}
+body{
+
+ font-weight: bold;
+font-family: arial;
+font-size: 3vw;
 
 }
 
-p#clickableoption {
+#lose_message{
+  font-weight: bold;
+font-family: arial;
+font-size: 3vw;
+color:coral;
+}
+#options {
+font-weight: bold;
+font-family: arial;
+font-size: 3vw;
 color:steelblue;
 
 }
-#lose_message{
-  color:lightcoral;
+#question_synopsis{
+font-weight: bold;
+font-family: arial;
+font-size: 3vw;
+color:darkgoldenrod;
 }
 html { 
   background: url(../blackimg.jpg) no-repeat center center fixed; 
@@ -36,7 +52,7 @@ html {
       }
 p {
 
-    color: #C96A16;
+    color: white;
          
         
       }

@@ -41,9 +41,19 @@ function replaceQuestion() {
 }
 
 
+	
+var opening = {
+	Clickfunction: function(el,ev){
+		var str = document.getElementById("clickableoptions").innerHTML= $("#question_synopsis").innerHTML((statements[question_num]["question"]["synopsis"]));
+}
+}
+
+
+
+
 function leading_statement(statements,question_num,score){
 	///Asks question and fields response
-	answer = (statements[question_num]["question"]["synopsis"]); //is a string
+	answer = raw_input (statements[question_num]["question"]["synopsis"]); //is a string
 	options = statements[question_num]["question"]["options"];// options is a list with a dictionary in it
 	lose_message = statements[question_num]["question"]["lose_message"];// is a string
 	for (var tupletest in options){
@@ -54,11 +64,7 @@ function leading_statement(statements,question_num,score){
 			}
 	}
 	
-	function myFunction() {
-    var str = document.getElementById("demo").innerHTML; 
-    var res = str.replace("Microsoft", "W3Schools");
-    document.getElementById("demo").innerHTML = res;
-}	
+		
 
 function checks_move_next_question(statements, question_num, answer1, score){
 	if (answer1 == "YES"){
