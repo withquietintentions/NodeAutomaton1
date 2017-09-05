@@ -3,7 +3,7 @@ var statements_lose_version = [
 	{"question" : { 
 		"synopsis": "Do you want to know what automatons are?",
 		"optionsA" : [ "yes","maybe"],
-		"optionsN" : [ "no"],
+		"optionsN" : [ "no", "nah"],
 		"lose_message": "Atomatons are metal statues of animal, men and monsters, from ancient Greek Myths. The best crafted ones can think and feel like humans. You lose and so does all humanity"
 	}}, 
 	{"question" : {
@@ -37,14 +37,16 @@ window.onload = function(question_num) {
 
         function printQuestion() {
             document.getElementById('question_synopsis').innerHTML = answer;
-            $('#optionsA').text(optionsA.join('\r\n'));//reads all in list
+            $('#optionsA').text(optionsA.join('\r\n'));//reads all in list but joins them
             $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
              $('#optionsA').click(function(){
-             alert("optionsA was clicked.");
+        		$("#lose_message").text(lose_message).show();
     		});
 
         }
     }
+   
+
     //hover for links in options
 // $(".hover").mouseover(function() {
 //     $(this).find(" > div").css("color", "cyan");
