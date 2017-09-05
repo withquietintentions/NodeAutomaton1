@@ -37,8 +37,10 @@ window.onload = function(question_num) {
 
         function printQuestion() {
             document.getElementById('question_synopsis').innerHTML = answer;
-            for (i =0; i < optionsN.length; i++) {
-            document.getElementById('options').innerHTML = optionsN[i];
+            $('#options').text(optionsN.join('\r\n'));
+            //for (i =0; i < optionsN.length; i++) {
+            //document.getElementById('options').innerHTML = optionsN[i];
         }
     }
-}
+
+
