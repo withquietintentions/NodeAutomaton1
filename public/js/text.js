@@ -1,4 +1,3 @@
-
  var statements_lose_version = [  
  	{"question" : { 
 		"synopsis": "Do you want to know what automatons are?",
@@ -9,7 +8,7 @@
 	{"question" : {
 		"synopsis": "Originally pandoras box was not a box. Was it a vase, a jar, or a basket?",
 		"optionsA": [ "vase", "jar", "basket"],
-		"optionsN": ["I don't care. "],
+		"optionsN": ["I don't care. ", "don't at all. ", "nope"],
 		"lose_message": "It was a JAR! You lose and so does humanity"
 	}}, 
 	{"question" : {
@@ -30,8 +29,8 @@ var lose_message = statements[question_num]["question"]["lose_message"];// is a 
 var total_questions = statements_lose_version.length;
 var score= 0;
 var lets_play = null;
-var play = true ;
-var num = 0;
+
+//var num = 0;
 var $question = $('#question_synopsis');
 var $optionsA = $('#optionsA');
 var $optionsN = $('#optionsN');
@@ -41,22 +40,31 @@ var $urnOpening = $("#urn_opening")
 var $optionsli = $('#options');
 
    
- $( document ).ready(function OpeningPage() {
+ $( document ).ready(function OpeningPage(num, question_num) {
 	"use strict";
+	var question_num = 0;
+	var play =! true ;
+	if (play == true) 
+	{
 	var num = 0;
+	var num1 = 0;
 	do{	
-	var enter_affirmative = optionsA[num];
-	var enter_negative = optionsN[num];
-	$optionsli.append('<li>'+enter_affirmative+'</li>');
+	var enter_negative = optionsA[num];
 	$optionsli.append('<li>'+enter_negative+'</li>');
 	num++;
 	}
+	
 	while (num<optionsA.length);
+	do{	
+	var enter_affirmative = optionsN[num1];
+	$optionsli.append('<li>'+enter_affirmative+'</li>');
+	num1++;
+	}
+	
+	while (num1<optionsN.length);
+	}
+	else window.location.href = "http://localhost:3000/";//sends it back to other game if false, thise will prob have to altered for heroku
+
 	
 });
-        	
-        	 
-
-
-
 
