@@ -8,12 +8,14 @@
 	}}, 
 	{"question" : {
 		"synopsis": "Originally pandoras box was not a box. Was it a vase, a jar, or a basket?",
-		"options": [ "vase", "jar", "basket"],
+		"optionsA": [ "vase", "jar", "basket"],
+		"optionsN": ["I don't care. "],
 		"lose_message": "It was a JAR! You lose and so does humanity"
 	}}, 
 	{"question" : {
 		"synopsis": "The main trouble with cyborgs, of course , is that they are the illegitimate offspring of militarism and patriarchal capitalism...But illegitimate offspring are... Open Pandoras box to read the rest (open/No)",
-		"options": ["open"],
+		"optionsA": ["open"],
+		"optionsN": ["no thanks"],
 		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto. All of humanity is doomed and you lose."
 	}} 
 ];
@@ -39,11 +41,14 @@ var $urnOpening = $("#urn_opening")
 var $optionsli = $('#options');
 
    
- $( document ).ready(function OpeningPage(num) {
+ $( document ).ready(function OpeningPage() {
 	"use strict";
 	var num = 0;
 	do{	
-	$('#options').append('<li>'+optionsA[num]+'</li>');
+	var enter_affirmative = optionsA[num];
+	var enter_negative = optionsN[num];
+	$optionsli.append('<li>'+enter_affirmative+'</li>');
+	$optionsli.append('<li>'+enter_negative+'</li>');
 	num++;
 	}
 	while (num<optionsA.length);
