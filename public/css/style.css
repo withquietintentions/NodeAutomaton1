@@ -7,6 +7,21 @@
 
 
 }
+#options 
+li:hover {
+color: blue;
+
+
+}
+#options li {
+  font-weight: bold;
+font-family: arial;
+font-size: 3vw;
+color:steelblue;
+display: inline-block;
+padding: 5%;
+  display: inline-block;
+}
 body{
 
  font-weight: bold;
@@ -14,6 +29,17 @@ font-family: arial;
 font-size: 3vw;
 
 }
+ ul {
+    margin-left: 20px;
+    color: blue;
+  }
+  li {
+    cursor: default;
+    display: inline-block;
+  }
+  span {
+    color: red;
+  }
 #urn_opening {
 font-weight: bold;
 font-family: arial;
@@ -30,15 +56,9 @@ font-size: 3vw;
 color:coral;
 }
 #optionsA, #optionsN {
-font-weight: bold;
-font-family: arial;
-font-size: 3vw;
-color:steelblue;
-display: inline-block;
-padding: 5%;
+
 }
-#optionsA:hover, #optionsN:hover {
-color:red;
+#optionsA:hovcolor:red;
 
 }
 #play_again{
@@ -47,6 +67,9 @@ color:red;
 }
 #play_again:hover{
   color:antiquewhite;
+}
+#alloptions {
+
 }
 
 #question_synopsis{

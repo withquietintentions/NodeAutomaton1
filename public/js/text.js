@@ -29,39 +29,77 @@ var total_questions = statements_lose_version.length;
 var score= 0;
 var lets_play = null;
 var play = true ;
+//var num = 0;
 
-//on load of page
-window.onload = function(question_num) {
 
-        printQuestion();
+   
+        $( document ).ready(function OpeningPage() {
+        	"use srict";
+        	var $question = $('#question_synopsis');
+        	var $optionsA = $('#optionsA');
+        	var $optionsN = $('#optionsN');
+        	var $playAgain = $("#play_again");
+        	var $loseMessage = $("#lose_message");
+        	var $urnOpening = $("#urn_opening")
+        	var $optionsli = $('#options');
 
-        function printQuestion() {
-            $('#question_synopsis').text(answer);
-            $('#optionsA').text(optionsA.join('\r\n'));//reads all in list but joins them
-            $('#optionsN').text(optionsN.join('\r\n'));//reads all in list
-             $('#optionsA').click(function(){//clicking to know more
-             	$('#question_synopsis').hide();
-             	$('#optionsA').hide();
-             	$('#optionsN').hide();
-        		$("#lose_message").text(lose_message).show();
-        		$("#urn_opening").text("Urn will open...").show();
+var num = 0
+
+while (num<optionsA.length){
+$("li[id^='node']:last").append(optionsA[num]);
+num++
+}
+
+var countries = ['United States', 'Canada', 'Argentina', 'Armenia'];
+var cList = $('ul.mylist')
+$.each(countries, function(i)
+{
+    var li = $('<li/>')
+        .addClass('ui-menu-item')
+        .attr('role', 'menuitem')
+        .appendTo(cList);
+    var aaa = $('<a/>')
+        .addClass('ui-all')
+        .text(countries[i])
+        .appendTo(li);
+});
+
+          	
+            $question.text(answer);
+           
+$( "li" ).hover(
+  function() {
+    $( this ).append( $( "<span> ***</span>" ) );
+  }, function() {
+    $( this ).find( "span:last" ).remove();
+  }
+);
+ 
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+       $('#options').append($("<li>").text(optionsA[1]));
+            $optionsA.click(function(){//clicking to know more
+             	$question.hide();
+             	$optionsA.hide();
+             	$optionsN.hide();
+        		$loseMessage.text(lose_message).show();
+        		$urnOpening.text("Urn will open...").show();
         		//send event here for motor to open by 1
         		//tigger breaking sound here
-        		$("#play_again").text("Play Again?").show();
-        		$("#play_again").click(function(){
-        			$("#lose_message").hide();
-        			$("#urn_opening").text("Urn will open...").hide();
-        			$("#play_again").text("Play Again?").hide();
+        		$playAgain.text("Play Again?").show();
+        		$playAgain.click(function(){
+        			$loseMessage.hide();
+        			$urnOpening.text("Urn will open...").hide();
+        			$playAgain.text("Play Again?").hide();
         			//move foward one question
         			});
-        		question_num ++;
-        		return question_num;
-
         		
+       	
     		});
-
-        }
-    }
+    });
+//}
    
 // $.each(array, function(index, value){
 //     $('.element').html( $('.element').html() + '<span>' + value +'</span>')
