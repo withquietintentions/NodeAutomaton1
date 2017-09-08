@@ -43,7 +43,13 @@ var $optionsli = $('#options');
  $( document ).ready(function OpeningPage(num, question_num) {
 	"use strict";
 	var question_num = 0;
-	var play =! true ;
+	var play = true ;
+
+	$(".container").click(function(){//temp testing to switch
+	window.location.href = "http://localhost:3000/";//sends it back to other game
+	});
+
+
 	if (play == true) 
 	{
 	var num = 0;
@@ -60,11 +66,9 @@ var $optionsli = $('#options');
 	$optionsli.append('<li>'+enter_affirmative+'</li>');
 	num1++;
 	}
-	
 	while (num1<optionsN.length);
 	}
-	else window.location.href = "http://localhost:3000/";//sends it back to other game if false, thise will prob have to altered for heroku
-
+	
 	
 });
 
