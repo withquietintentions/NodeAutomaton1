@@ -1,6 +1,6 @@
 
-var statements_lose_version = [  
-	{"question" : { 
+ var statements_lose_version = [  
+ 	{"question" : { 
 		"synopsis": "Do you want to know what automatons are?",
 		"optionsA" : [ "yes","maybe"],
 		"optionsN" : [ "no", "nah"],
@@ -29,85 +29,29 @@ var total_questions = statements_lose_version.length;
 var score= 0;
 var lets_play = null;
 var play = true ;
-//var num = 0;
-
+var num = 0;
+var $question = $('#question_synopsis');
+var $optionsA = $('#optionsA');
+var $optionsN = $('#optionsN');
+var $playAgain = $("#play_again");
+var $loseMessage = $("#lose_message");
+var $urnOpening = $("#urn_opening")
+var $optionsli = $('#options');
 
    
-        $( document ).ready(function OpeningPage() {
-        	"use srict";
-        	var $question = $('#question_synopsis');
-        	var $optionsA = $('#optionsA');
-        	var $optionsN = $('#optionsN');
-        	var $playAgain = $("#play_again");
-        	var $loseMessage = $("#lose_message");
-        	var $urnOpening = $("#urn_opening")
-        	var $optionsli = $('#options');
-
-var num = 0
-
-while (num<optionsA.length){
-$("li[id^='node']:last").append(optionsA[num]);
-num++
-}
-
-var countries = ['United States', 'Canada', 'Argentina', 'Armenia'];
-var cList = $('ul.mylist')
-$.each(countries, function(i)
-{
-    var li = $('<li/>')
-        .addClass('ui-menu-item')
-        .attr('role', 'menuitem')
-        .appendTo(cList);
-    var aaa = $('<a/>')
-        .addClass('ui-all')
-        .text(countries[i])
-        .appendTo(li);
+ $( document ).ready(function OpeningPage(num) {
+	"use strict";
+	var num = 0;
+	do{	
+	$('#options').append('<li>'+optionsA[num]+'</li>');
+	num++;
+	}
+	while (num<optionsA.length);
+	
 });
+        	
+        	 
 
-          	
-            $question.text(answer);
-           
-$( "li" ).hover(
-  function() {
-    $( this ).append( $( "<span> ***</span>" ) );
-  }, function() {
-    $( this ).find( "span:last" ).remove();
-  }
-);
- 
-$( "li.fade" ).hover(function() {
-  $( this ).fadeOut( 100 );
-  $( this ).fadeIn( 500 );
-});
-       $('#options').append($("<li>").text(optionsA[1]));
-            $optionsA.click(function(){//clicking to know more
-             	$question.hide();
-             	$optionsA.hide();
-             	$optionsN.hide();
-        		$loseMessage.text(lose_message).show();
-        		$urnOpening.text("Urn will open...").show();
-        		//send event here for motor to open by 1
-        		//tigger breaking sound here
-        		$playAgain.text("Play Again?").show();
-        		$playAgain.click(function(){
-        			$loseMessage.hide();
-        			$urnOpening.text("Urn will open...").hide();
-        			$playAgain.text("Play Again?").hide();
-        			//move foward one question
-        			});
-        		
-       	
-    		});
-    });
-//}
-   
-// $.each(array, function(index, value){
-//     $('.element').html( $('.element').html() + '<span>' + value +'</span>')
-// });
-    //hover for links in options
-// $(".hover").mouseover(function() {
-//     $(this).find(" > div").css("color", "cyan");
-// }).mouseout(function() {
-//     $(this).find(" > div").css("color","steelblue");
-// });;
+
+
 
