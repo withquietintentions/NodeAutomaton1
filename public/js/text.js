@@ -36,7 +36,7 @@ var $optionsN = $('#optionsN');
 var $playAgain = $("#play_again");
 var $loseMessage = $("#lose_message");
 var $urnOpening = $("#urn_opening")
-//var $optionsli = $('#options');
+var $options = $('#options');
 var play = true;
 
 
@@ -59,7 +59,10 @@ var play = true;
 	 };
 
 	$optionsA.click(function(){
+		$question.hide();
+		$options.hide();
 		$loseMessage.text(lose_message);
+		$urnOpening.text("urn opening...");
 	});
 
 ///where state change betweeen opened and closed will occur///
