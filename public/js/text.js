@@ -30,7 +30,7 @@ var lose_message = statements[question_num]["question"]["lose_message"];// is a 
 var total_questions = statements_lose_version.length;
 var score= 0;
 var lets_play = null;
-var num1 = 1;
+var num1 = 0;
 var $question = $('#question_synopsis');
 var $optionsA = $('#optionsA');
 var $optionsN = $('#optionsN');
@@ -39,7 +39,6 @@ var $loseMessage = $("#lose_message");
 var $urnOpening = $("#urn_opening")
 var $optionsli = $('#options');
 var play = true ;
-var result = statements_lose_version.indexOf("question", 1);
    
  // $( document ).ready(function OpeningPage() {
 	// "use strict";
@@ -61,6 +60,7 @@ function Test(question_num, num, num1){
 	return num
 	}
 	while (num<optionsA.length);
+	
 	do{	
 	var enter_affirmative = optionsN[num1];
 	$optionsli.append('<li>'+enter_affirmative+'</li>');
@@ -68,8 +68,13 @@ function Test(question_num, num, num1){
 	}
 	while (num1<optionsN.length);
 }
+return question_num++;
+
 }
 
 //ChangeState(question_num, num, num1);
-Test(question_num, num, num1);
+question_num = Test(question_num, num, num1);
+num = Test(question_num, num, num1);
+num1= Test(question_num, num, num1);
+
 
