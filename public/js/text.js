@@ -22,7 +22,7 @@
 
 var statements = statements_lose_version;
 
-var question_num = 1;
+var question_num = 0;
 var answer = statements[question_num]["question"]["synopsis"]; //is a string
 var optionsA = statements[question_num]["question"]["optionsA"];// options is a list 
 var optionsN = statements[question_num]["question"]["optionsN"];// options is a list 
@@ -36,7 +36,7 @@ var $optionsN = $('#optionsN');
 var $playAgain = $("#play_again");
 var $loseMessage = $("#lose_message");
 var $urnOpening = $("#urn_opening")
-var $optionsli = $('#options');
+//var $optionsli = $('#options');
 var play = true;
 
 
@@ -49,14 +49,18 @@ var play = true;
 	var num = 0;
 	for (num= 0; num<optionsA.length; num++){	
 	var enter_negative = optionsA[num];
-	$optionsli.append('<li>'+enter_negative+'</li>');
+	$optionsA.append('<li>'+enter_negative+'</li>');
 	} 
 	for(num1=0; num1<optionsN.length; num1++){	
 	var enter_affirmative = optionsN[num1];
-	$optionsli.append('<li>'+enter_affirmative+'</li>');
+	$optionsN.append('<li>'+enter_affirmative+'</li>');
 	}
 	//question_num++;
 	 };
+
+	$optionsA.click(function(){
+		$loseMessage.text(lose_message);
+	});
 
 ///where state change betweeen opened and closed will occur///
  $("#button").click(function ChangeState(question_num, num, num1){//temp testing to switch
