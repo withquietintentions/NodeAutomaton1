@@ -144,7 +144,6 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });//tells me I can go to localhost 3000 to find my page in the browser
 
-console.log("Express app running on port 3000");//terminal log 
 
 
 module.exports = app;

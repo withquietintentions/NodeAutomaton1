@@ -6,15 +6,16 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
+    "curl": "^0.1.4",
+    "engines": {
+      "node": "6.11.2",
+      "npm": "3.10.10"
+    },
     "express": "^4.15.4",
     "express-json": "^1.0.0",
     "nedb": "^1.8.0",
     "openssl": "^1.1.0",
-    "particle-api-js": "^6.5.0",
-     "engines": {
-      "node": "6.11.2",
-      "npm": "3.10.10"
-    }
+    "particle-api-js": "^6.5.0"
   },
   "devDependencies": {},
   "scripts": {
