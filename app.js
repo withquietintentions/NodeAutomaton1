@@ -16,28 +16,31 @@ app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
 
 //TESTING PARTICLE IN HERE
-//responses
-//var apikeys = require ('./apikeys');
-
-//console.log("token in app: " + apikeys.token);
-particle.login({username: 'zmccloskey@gmail.com', password: 'Charming123'}).then(
-  function(data) {
-    token = data.body.access_token;
-    return token;
-  },
-  function (err) {
-    console.log('Could not log in.', err);
-  }
-);
-var fnPr = particle.callFunction({ deviceId: '410032000b47343138333038', name: 'y', argument: 'D0:HIGH', auth: token });
+//NodeJS code for using Photon variable
+  particle.getVariable({ deviceId: d_id, name: 'int_val', auth: l_token }).then(
+        function (data) {
+            console.log('Device variable retrieved successfully:', data.body.result);
+        }, function (err) {
+            console.log('An error occurred while getting attrs:', err);
+        });
+  //NodeJS code for Cloud function
+var fnPr = particle.callFunction({ deviceId: d_id, name: 'int_fun', argument: 'wifi_rssi', auth: l_token });
 
 fnPr.then(
-  function(data) {
-    console.log('Function called succesfully:', data);
-  }, function(err) {
-    console.log('An error occurred:', err);
-  });
+        function (data) {
+            console.log('Function called succesfully WiFi_RSSI: ', data.body.return_value);
+        }, function (err) {
+            console.log('An error occurred:', err);
+        });
 
+var fnPr2 = particle.callFunction({ deviceId: d_id, name: 'int_fun', argument: 'blink', auth: l_token });
+
+fnPr2.then(
+        function (data) {
+            console.log('Function called succesfully LED: ', data.body.return_value);
+        }, function (err) {
+            console.log('An error occurred:', err);
+        });
 ///END OF PARICLE TEST
 
 
