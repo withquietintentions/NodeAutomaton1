@@ -73,55 +73,53 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 var dbGuesses = new Datastore({ filename: './db/guesses.db', autoload: true });
 app.post("/guess", function(req, res) {
     var guess = req.body.guess;
-
-    var doc = {};
     var guessCleanedUp = guess.trim().toLowerCase();
 
-
-    doc["guess"] = guessCleanedUp;
-    doc["time"] = new Date();
-
-    counter = {};
-    
-    dbGuesses.insert(doc, function(err, updatedDoc) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      dbGuesses.find({}, function(err, docs) {
-        if (err) {
-          console.log(err);
-          return;
-        } 
+    insertGuessIntoDb(
+      guessCleanedUp, 
+      function(docs) {
         var counter = getCounterDictionary(docs);
-        console.log(counter);
-
         var freqs = getTopTenFromCounter(counter);
-        console.log(freqs);
-
         var numbers = Object.keys(freqs).map(Number).sort().reverse();
-        console.log(numbers);
-
         var result = checkTopWords(numbers, freqs, guessCleanedUp);
+        console.log(freqs);
         if (result != null) {
           console.log("removed!: ", result);
           // if result is non null then there is a match
-          res.end(guess);
-          return;
+          res.send(guess);
         } else {
           // if no match
-          res.end(null);
-          return;
+          res.send(null);
         }
-      })
+      }, 
+      function(err) {
+        console.log(err);
+        res.send(null);
+      }
+    );
+});
+
+function insertGuessIntoDb(guess, success, failure) {
+  var doc = {};
+  doc["guess"] = guess;
+  doc["time"] = new Date();
+  dbGuesses.insert(doc, function(err, updatedDoc) {
+    if (err) {
+      failure(err);
+      return;
+    }
+    dbGuesses.find({}, function(err, docs) {
+      if (err) {
+        failure(err);
+        return;
+      } 
+      success(docs);
     });
-    res.end(null);
-  }
-);
+  });
+}
 
 function checkTopWords(numbers, freqs, guessCleanedUp) {
   var topWords = 5;
-  var tmp = 0;
   for (var i = 0; i < numbers.length; i++) {
     var list = freqs[numbers[i]];
     for (var j = 0; j < list.length; j++) {
@@ -138,6 +136,7 @@ function checkTopWords(numbers, freqs, guessCleanedUp) {
 }
 
 function getCounterDictionary(docs) {
+  var counter = {};
   for (var i = 0; i < docs.length; i++) {
     var val = docs[i].guess;
     if (counter[val] == null) {
