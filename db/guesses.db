@@ -15,11 +15,14 @@
 {"guess":"hello","time":{"$$date":1505525684304},"_id":"7ee0AcwyIGNHJGYa"}
 {"guess":"asdffff","time":{"$$date":1505527971293},"_id":"7erGiR1nyQeV9Fvd"}
 {"guess":"asdff","time":{"$$date":1505524798165},"_id":"7pZ8MboNztBJAyjM"}
+{"guess":"asdf","time":{"$$date":1505528969491},"_id":"83GSBeUnadpqHHpg"}
 {"guess":"asdf","time":{"$$date":1505527886252},"_id":"9CdIzLFU0ZK0FZR9"}
 {"guess":"asdf","time":{"$$date":1505527949907},"_id":"Ag4PXnlxmkekrfT2"}
 {"guess":"blah","time":{"$$date":1505526490960},"_id":"EhlBiXBfxP2RnpCY"}
+{"guess":"word","time":{"$$date":1505528907934},"_id":"GOkbVl9ksXuZXTrA"}
 {"guess":"asddf","time":{"$$date":1505528672276},"_id":"ImYOC7bDPjJw7eom"}
 {"guess":"boo","time":{"$$date":1505526471586},"_id":"Iq6VDvWvc8gbA9wT"}
+{"guess":"smile","time":{"$$date":1505528913100},"_id":"JdMXvhfCyH0Kzigu"}
 {"guess":"asdfefafe","time":{"$$date":1505528076421},"_id":"KAxA0HzKvBRzFmcK"}
 {"guess":"zxvzv","time":{"$$date":1504573245358},"_id":"KghF9PzqsIkwDv3Y"}
 {"guess":"ddddd","time":{"$$date":1505527978389},"_id":"KsGsfMKOGRuut4cz"}
@@ -42,8 +45,5 @@
 {"guess":"war","time":{"$$date":1504912786854},"_id":"lU2USjeOvRJ0GZqc"}
 {"guess":"hiasidhfihf","time":{"$$date":1505527939595},"_id":"mxLNiNlADOIVLJ7D"}
 {"guess":"klh","time":{"$$date":1504469199094},"_id":"pUGlPjXWNtB55ZPe"}
-{"guess":"asdf","time":{"$$date":1505526482680},"_id":"sCMvt7QqMbwgWCL9"}
-{"guess":"word","time":{"$$date":1505528907934},"_id":"GOkbVl9ksXuZXTrA"}
-{"guess":"smile","time":{"$$date":1505528913100},"_id":"JdMXvhfCyH0Kzigu"}
 {"guess":"ggg","time":{"$$date":1505528961877},"_id":"qW5AUk04WZetVBcm"}
-{"guess":"asdf","time":{"$$date":1505528969491},"_id":"83GSBeUnadpqHHpg"}
+{"guess":"asdf","time":{"$$date":1505526482680},"_id":"sCMvt7QqMbwgWCL9"}

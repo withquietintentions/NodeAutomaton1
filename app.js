@@ -23,9 +23,9 @@ var token = process.env.TOKEN;
 var d_uid = process.env.D_UID;
 
 
-//var timer1;
+var timer1;
 
-//timer1 = setInterval(talk_with_photon,10000);//might want the convo only happen on an event? 
+timer1 = setInterval(talk_with_photon,10000);//might want the convo only happen on an event? 
 
 function talk_with_photon() {
     g_var(d_uid, token);
