@@ -63,15 +63,8 @@
 	}},
 ]
 
-
 var question_num = 0;
-var statements = statements_lose_version;
-var answer = statements[question_num]["question"]["synopsis"]; //is a string
-var optionsA = statements[question_num]["question"]["optionsA"];// options is a list 
-var optionsN = statements[question_num]["question"]["optionsN"];// options is a list 
-var lose_message = statements[question_num]["question"]["lose_message"];// is a string
-var total_questions = statements_lose_version.length;
-var num1 = 0;
+
 var $question = $('#question_synopsis');
 var $optionsA = $('#optionsA');
 var $optionsN = $('#optionsN');
@@ -79,79 +72,57 @@ var $playAgain = $("#play_again");
 var $loseMessage = $("#lose_message");
 var $urnOpening = $("#urn_opening")
 var $options = $('#options');
-var play = true;   // script is now loaded and executed.
-    // put your dependent JS here.
 
-function OpeningPage(question_num){
+$playAgain.click(function() {
+	incrementQuestionNum();
+	loadQuestion()
+});
 
- 
+$optionsN.click(function() {
+	incrementQuestionNum();
+	loadQuestion()
+});
+
+$optionsA.click(function(){
+	$question.empty();
+	$optionsA.empty();
+	$optionsN.empty();
+	var lose_message = statements_lose_version[question_num]["question"]["lose_message"];// is a string
+	$loseMessage.text(lose_message);
+	$urnOpening.text("urn opening...");
+	$playAgain.text("play again");
+});
+
+
+function loadQuestion() {
+	var answer = statements_lose_version[question_num]["question"]["synopsis"]; //is a string
+	var optionsA = statements_lose_version[question_num]["question"]["optionsA"];// options is a list 
+	var optionsN = statements_lose_version[question_num]["question"]["optionsN"];// options is a list 
+	console.log(optionsA)
 	$question.text(answer);
+	$optionsA.empty();
+	$optionsN.empty();
+	$playAgain.empty();
+	$loseMessage.empty();
+	$urnOpening.empty();
+
 	var num = 0;
 	for (num= 0; num<optionsA.length; num++){	
-	var enter_negative = optionsA[num];
-	$optionsA.append('<li>'+enter_negative+'</li>');
+		var enter_negative = optionsA[num];
+		console.log(enter_negative)
+		$optionsA.append('<li>'+enter_negative+'</li>');
+		console.log($optionsA)
 	} 
-	for(num1=0; num1<optionsN.length; num1++){	
-	var enter_affirmative = optionsN[num1];
-	$optionsN.append('<li>'+enter_affirmative+'</li>');
+	for(var num1=0; num1<optionsN.length; num1++){	
+		var enter_affirmative = optionsN[num1];
+		$optionsN.append('<li>'+enter_affirmative+'</li>');
 	}
-	//question_num++;
+}
 
-	$optionsA.click(function(){
-		$question.hide();
-		$options.hide();
-		$loseMessage.text(lose_message);
-		$urnOpening.text("urn opening...");
-	});
+function incrementQuestionNum() {
+	question_num += 1;
+	question_num = question_num % statements_lose_version.length;
+}
 
-	}
-
-	function OnClick(question_num){
-		this.question_num++;
-		return this.question_num;
-		
-		
-	}
-jQuery(document).ready(function($){
-                $(".post").on("click",function(){
-                    $.ajax({
-                        url: "http://www.yourwebsite.com/page.php",
-                        type: "POST",
-                        data: { name: "John", location: "Boston" },
-                        success: function(response){
-                              //do action  
-                        },
-                        error: function(){
-                              // do action
-                        }
-                    });
-                });
-            });
-
-///where state change betweeen opened and closed will occur///
- $("#button").click(function ChangeState(question_num, num, num1){//temp testing to switch
- 	$.post('api', {
-
- 		
- 	}
-	window.location.href = "http://localhost:3000/";
-	//sends it back to other game ('port', (process.env.PORT || 3000));
- 	});
-// ///
-
-
-//ChangeState(question_num, num, num1);
-//for (var i =0; i<statements_lose_version.length; i++){
-OpeningPage(this.question_num);
-//}
-question_num = OnClick(this.question_num)
-
-
-
-	
-//num1 =OpeningPage(question_num, num, num1);
-
-
-
-
-
+loadQuestion();
+ 
