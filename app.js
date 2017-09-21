@@ -25,11 +25,11 @@ const D_UID = process.env.D_UID;
 
 function particle_blink() {
     particle.callFunction({ deviceId: D_UID, name: 'blink', auth: TOKEN }).then(
-	    function (data) {
-	        console.log('Blink called succesfully : ', data.body.return_value);
-	    }, function (err) {
-	        console.log('An error occurred:', err);
-	    });	
+      function (data) {
+          console.log('Blink called succesfully : ', data.body.return_value);
+      }, function (err) {
+          console.log('An error occurred:', err);
+      }); 
 }
 ///END OF PARICLE TEST
 
@@ -142,5 +142,3 @@ app.listen(app.get('port'), function() {
 
 
 module.exports = app;
-
-
