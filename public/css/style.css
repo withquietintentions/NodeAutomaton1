@@ -1,11 +1,20 @@
 /*Automaton*/
 
 .container  {
- padding-top: 25%;
+ padding-top: 5%;
  width: 87%;
  padding-left: 5%;
+}
 
 
+.textbox {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 #optionsN 
 li:hover {
@@ -43,6 +52,11 @@ body{
 font-weight: bold;
 font-family: arial;
 font-size: 3vw;
+    background: #181818;
+    color: #ddd;
+    
+    margin: 0 auto;
+    padding: 0;
 
 }
  /*ul {
@@ -53,8 +67,9 @@ font-size: 3vw;
     cursor: default;
     display: inline-block;
   }*/
-  span {
-    color: red;
+span {
+    color: black;
+   
   }
 #urn_opening {
 font-weight: bold;
@@ -87,11 +102,11 @@ font-size: 3vw;
 color:darkgoldenrod;
 }
 html { 
-  background: url(../blackimg.jpg) no-repeat center center fixed; 
+/*  background: url(../blackimg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
    
    h1 {
@@ -112,6 +127,7 @@ p {
 form {
   display: inline-block;
     color: white;
+
     
   
     display: -webkit-box;
@@ -124,10 +140,8 @@ form {
 }
 
 #submitForm {
-  display: inline-block;
-    color: white;
-    
   
+  display: inline-block;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -156,7 +170,7 @@ margin-bottom:4%;
 text-align: center;
 }
 a {
-    color: red;
+    color: orange;
 }
 /* mouse over link */
 a:hover {
@@ -204,5 +218,5 @@ button:hover {
 }
 
 h2:hover {
-    color: red;
+    color: orange;
 }
