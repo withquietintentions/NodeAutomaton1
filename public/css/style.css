@@ -120,7 +120,7 @@ html {
 p {
 
     color: grey;
-    
+
         
       }
 
@@ -138,10 +138,18 @@ form {
         -ms-flex-pack: distribute;
             justify-content: space-around;
 }
-
+/*from keyboard demo css*/
+#console { width: 90%; list-style-type: none; margin: 0 auto; padding: 0; }
+#console li { text-align: center; }
+#console .keyboard { color: #ec7600; }
+#console .event { color: #facd22; }
+#console .accepted { color: #8AC763; }
+#console .ignored { color: #f00; }
+#console .content { color: RoyalBlue; }
+/*end of FROM KEYBOARD DEMO CSS*/
 #submitForm {
 
-  display: inline-block;
+  /*display: inline-block;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

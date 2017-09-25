@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="/css/keyboard.min.css"/> <!-- style sheet -->
     <link rel="stylesheet" href="/css/keyboard-basic.min.css"/> <!-- style sheet -->
     <link rel="stylesheet" href="/css/bootstrap1.min.css"/>
+
     <title>Automaton Remove</title>
 </head>
 <body>
      <!-- div of container and background -->
     <div class ="container">
           <!-- div instructions -->
-        <div><h1>What would you remove from the world?</h1><p>Type into the form something you would like to remove from the world and we will see if we can do that...</p></div> 
+        <div><h1>What would you remove from the world?</h1><p></p></div> 
           
            <!--  div of response to entry -->
            <div id = "responseMessage"></div><!-- where try again or yes text goes -->
@@ -24,7 +25,7 @@
            <div id="submitForm">
               <input id="guess" class= "textbox" type="text" size= "15" placeholder="one word" required/>
 
-              
+              <div style="display:inline-block; width:10%;"></div>
              <button id="submit" onclick="dictionary.onRemove()" type="button">Remove</button> 
            </div>
         
@@ -35,8 +36,10 @@
     <script src="/js/jquery.keyboard.min.js"></script>  <!-- just a downloaded file of jquery-->
     <script src="/js/dictionary.js"></script>  <!--where the javascript is-->
     <script src="/js/main.js"></script>
-   
-   
+   <script src="/js/submitbutton.js"></script> 
+ 
+</script>
+
 <!-- adds particle  -->
 </body>
 </html>
