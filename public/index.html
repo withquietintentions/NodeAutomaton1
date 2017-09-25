@@ -23,7 +23,7 @@
            <div id = "responseMessage"></div><!-- where try again or yes text goes -->
 
            <div id="submitForm">
-              <input id="guess" class= "textbox" type="text" size= "15" placeholder="one word" required/>
+              <input id="guess" class= "textbox" type="text" onKeyPress="return checkSubmit(event)" size= "15" placeholder="one word" required/>
 
               <div style="display:inline-block; width:10%;"></div>
              <button id="submit" onclick="dictionary.onRemove()" type="button">Remove</button> 
