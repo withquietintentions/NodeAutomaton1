@@ -4,7 +4,7 @@
  */
 .ui-keyboard {
 	/* adjust overall keyboard size using "font-size" */
-	font-size: 10px;
+	font-size: 12px;
 	text-align: left;/*makes keyboard shift left*/
 	background: #fefefe;
 	border: 1px solid #aaa;
@@ -26,6 +26,9 @@
 }
 .ui-keyboard-has-focus {
 	z-index: 16001;
+}
+button.ui-keyboard-button.btn {
+    padding: 1px 6px;
 }
 .ui-keyboard-button {
 	border: 1px solid #aaa;
