@@ -121,7 +121,7 @@ html {
 p {
 
     color: grey;
-  
+
 
         
       }
@@ -159,7 +159,7 @@ input{
   height:50px; font-size: 35px;
 }
 #responseMessage {
-font-size: 4vw;
+font-size: 3vw;
 color: #00FDFF;
 font-family: arial;
 margin-bottom:4%;
