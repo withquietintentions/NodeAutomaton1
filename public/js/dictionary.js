@@ -17,10 +17,11 @@ var dictionary = {
           messageHtml.fadeOut(7000);
         } else {
            messageHtml.fadeIn();
-          messageHtml.html("Sorry not enough ppl requested to remove that yet.");
+          messageHtml.html("Sorry not enough ppl requested " + guess + " to be removed from the world yet.");
           messageHtml.fadeOut(7000);
         } 
       });;
+     
   }
 };
 
@@ -29,8 +30,3 @@ var movemotor = {
 
   
 }
-
-$('submit').click(function(){
-  var kb = $('#keyboard').getkeyboard();
-  kb.$preview.val('').focus();
-});

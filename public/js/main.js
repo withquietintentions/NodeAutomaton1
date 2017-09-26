@@ -21,6 +21,7 @@ $(document).ready(function(){
 			// when a decimal exists in the input area
 			buttonDisabled: 'disabled'
 		} });
+
 	//.addTyping();
 })
 
@@ -42,3 +43,9 @@ $("#guess").click(function(){
   $.keyboard.keyaction.clear(kb);
   kb.$preview.focus();
 });
+//clears form input
+$("#guess").click(function() {
+        this.value = '';
+    
+});
+    
