@@ -34,3 +34,11 @@ $.keyboard.keyaction.enter = function(base){
     base.insertText('\r\n'); // textarea
   }
 };
+
+///clears keyboard
+  
+$("#guess").click(function(){
+  var kb = $('#guess').getkeyboard();
+  $.keyboard.keyaction.clear(kb);
+  kb.$preview.focus();
+});

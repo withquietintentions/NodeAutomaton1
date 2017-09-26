@@ -30,3 +30,7 @@ var movemotor = {
   
 }
 
+$('submit').click(function(){
+  var kb = $('#keyboard').getkeyboard();
+  kb.$preview.val('').focus();
+});
