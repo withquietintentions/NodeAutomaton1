@@ -148,10 +148,8 @@ form {
 #console .content { color: RoyalBlue; }
 /*end of FROM KEYBOARD DEMO CSS*/
 #submitForm {
-
-  
-
-  /*display: inline-block;*/
+float:center;
+  width:200px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -207,7 +205,7 @@ button {
   border: none;
   color: black;
   text-align: center;
-  font-size: 5vw;
+  font-size: 20vw;
   padding: 20px;
   width: 10%;
   transition: all 0.5s;

@@ -11,7 +11,7 @@ var dictionary = {
       .done(function(data) {
         console.log("data", data);
         if (data && data.length > 0) {
-          messageHtml.html(guess + " was removed from the world. Thank you.");
+          messageHtml.html(guess + " was removed from the world, thank you.");
         } else {
           messageHtml.html("Sorry not enough people have requested that be removed from the world yet.");
         } 

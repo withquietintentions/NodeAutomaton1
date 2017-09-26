@@ -4,7 +4,7 @@
  */
 .ui-keyboard {
 	/* adjust overall keyboard size using "font-size" */
-	font-size: 12px;
+	font-size: 10px;
 	text-align: left;/*makes keyboard shift left*/
 	background: #fefefe;
 	border: 1px solid #aaa;
@@ -65,12 +65,12 @@ button.ui-keyboard-button.btn {
 .ui-keyboard-button span {
 	display: block;
 	width: 100%;
-	font-size: 1.2em;
+	font-size: 1.2em;/*font size of button text*/
 	text-align: center;/*not it*/
 }
 /* make action keys extra-wide */
 .ui-keyboard-actionkey:not(.ui-keyboard-dec):not(.ui-keyboard-combo) {
-	min-width: 6em;
+	min-width: 8em;
 }
 .ui-keyboard-space {
 	width: 15em;
@@ -147,7 +147,7 @@ button.ui-keyboard-toggle.ui-keyboard-disabled span {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzExMSI+PHBhdGggZD0iTTcuNCA0LjRWMi41YzAtMS40LTEuMS0yLjUtMi41LTIuNWMtMS40IDAtMi41IDEuMS0yLjUgMi41djEuOSBjLTAuNyAwLTEuMiAwLjUtMS4yIDEuMnYzLjFDMS4zIDkuNCAxLjggMTAgMi41IDEwaDQuOWMwLjcgMCAxLjItMC42IDEuMi0xLjJWNS42IEM4LjcgNC45IDguMSA0LjQgNy40IDQuNHogTTUuMyA3LjR2MS4wYzAgMC4yLTAuMSAwLjMtMC4zIDAuM2MtMC4yIDAtMC4zLTAuMS0wLjMtMC4zVjcuNCBjLTAuMi0wLjEtMC4zLTAuMy0wLjMtMC41YzAtMC4zIDAuMy0wLjYgMC42LTAuNmMwLjMgMCAwLjYgMC4zIDAuNiAwLjYgQzUuNiA3LjEgNS41IDcuMyA1LjMgNy40eiBNNi4yIDQuNEgzLjdWMi41YzAtMC43IDAuNS0xLjIgMS4yLTEuMmMwLjcgMCAxLjIgMC42IDEuMiAxLjIgVjQuNHoiLz48L3N2Zz4=');
 }
 .ui-keyboard.ui-keyboard-disabled button:not(.ui-keyboard-toggle), .ui-keyboard.ui-keyboard-disabled input {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 /*** Alt-Keys Popup extension ***/
