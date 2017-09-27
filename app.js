@@ -11,9 +11,22 @@ var particle = new Particle();
 var token
 
 var Datastore = require('nedb');
+if (process.env.REDISTOGO_URL) {
+    // TODO: redistogo connection
+    var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+    var redis = require("redis").createClient(rtg.port, rtg.hostname);
+
+    redis.auth(rtg.auth.split(":")[1]);
+} else {
+    var redis = require("redis").createClient();
+}
+
+
 app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
 app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
+
+
 
 //TESTING PARTICLE IN HERE
 //NodeJS code for using Photon variable
