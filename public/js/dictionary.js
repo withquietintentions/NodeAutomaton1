@@ -15,6 +15,8 @@ var dictionary = {
           messageHtml.fadeIn();
           messageHtml.html(guess + " was removed from the world, thank you.")
           messageHtml.fadeOut(7000);
+          play_clay();
+        
         } else {
            messageHtml.fadeIn();
           messageHtml.html("Sorry not enough ppl requested " + guess + " to be removed from the world yet.");
@@ -29,4 +31,10 @@ var movemotor = {
 
 
   
+}
+function play_clay() {
+
+   var audioElement = document.createElement('audio');//plays claybreak
+          audioElement.setAttribute('src', 'claybreak.mp3');  //plays claybreak
+          audioElement.play();//plays clay break
 }

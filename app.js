@@ -8,13 +8,16 @@ var json = require('express-json');
 var cors  = require("cors"); var app = express();
 var Particle = require('particle-api-js');
 var particle = new Particle();
-var token
+var token;
+
 
 var Datastore = require('nedb');
 app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
 app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
+//player 
 
+//player end
 //TESTING PARTICLE IN HERE
 //NodeJS code for using Photon variable
 var Particle = require('particle-api-js');
@@ -32,7 +35,8 @@ function particle_blink() {
       }); 
 }
 ///END OF PARICLE TEST
-
+//sound player 
+//end of sound player
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.json() );       // to support JSON-encoded bodies
@@ -57,9 +61,17 @@ app.post("/guess", function(req, res) {
           console.log("removed!: ", result);
           // if result is non null then there is a match
           // MATCH WAS FOUND!!!!!!!!!!!!
-         particle_blink();
+         
+          particle_blink();
 
           res.send(guess);
+          //test sound
+          
+// player.play(function(err, player){
+//   console.log('playend!');
+// });
+          //end test of sound
+          
         } else {
           // if no match
           res.send(null);
