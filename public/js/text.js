@@ -31,8 +31,9 @@ function startLoop(statements_lose_version) {
 		$optionsN.empty();
 		var lose_message = statements_lose_version[question_num]["question"]["lose_message"];// is a string
 		$loseMessage.text(lose_message);
-		$urnOpening.text("urn opening...");
-		$playAgain.text("play again");
+		$urnOpening.text("urn will open...");
+		$playAgain.text("PLAY AGAIN");
+		play_clay();
 	});
 
 
@@ -68,6 +69,14 @@ function startLoop(statements_lose_version) {
 
 	loadQuestion();
 }
+
+function play_clay() {
+
+   var audioElement = document.createElement('audio');//plays claybreak
+          audioElement.setAttribute('src', 'http://www.artandscienceanalysisgroup.net/AutomatonImages/claybreak.mp3');  //plays claybreak
+          audioElement.play();//plays clay break
+}
+
 
 
  

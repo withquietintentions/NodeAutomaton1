@@ -35,6 +35,6 @@ var movemotor = {
 function play_clay() {
 
    var audioElement = document.createElement('audio');//plays claybreak
-          audioElement.setAttribute('src', 'http://www.artandscienceanalysisgroup.net/AutomatonImages/claybreak.mp3');  //plays claybreak
+          audioElement.setAttribute('src', 'http://www.artandscienceanalysisgroup.net/AutomatonImages/removesound.mp3');  //plays claybreak
           audioElement.play();//plays clay break
 }

@@ -4,8 +4,9 @@
  padding-top: 5%;
  width: 87%;
  padding-left: 5%;
-}
+ font-family: sans-serif;
 
+}
 
 .textbox {
     width: 50%;
@@ -27,21 +28,17 @@ color: blue;
 
 }
 #optionsN li {
-font-weight: bold;
-font-family: arial;
 font-size: 3vw;
-color:steelblue;
+color:lightgrey;
 cursor: default;
 /*display: inline-block;*/
 padding: 5%;
 }
 #optionsA li {
-font-weight: bold;
-font-family: arial;
+
 font-size: 3vw;
-color:steelblue;
-/*display: inline-block;*/
-padding: 5%;
+color:lightgrey;
+padding-top: 5%;
 }
 #options ul{
 display: inline-block;
@@ -49,12 +46,9 @@ list-style-type: none;
 
 }
 body{
-font-weight: bold;
-font-family: arial;
 font-size: 3vw;
     background: #181818;
     color: #ddd;
-    
     margin: 0 auto;
     padding: 0;
 
@@ -72,34 +66,31 @@ span {
    
   }
 #urn_opening {
-font-weight: bold;
-font-family: arial;
 font-size: 3vw;
-color:pink;
-line-height: 2em;
+color:goldenrod;
+line-height: 1em;
 display: inline-block;
-
+font-style: italic;
 }
 #lose_message{
-  font-weight: bold;
-font-family: arial;
 font-size: 3vw;
 color:coral;
 }
 
-#play_again{
-  color:white;
-  line-height: 2.5em;
-}
 #play_again:hover{
+  color:gray;
+}
+
+#play_again{
   color:antiquewhite;
+  padding-top: 2.5vw;
+  font-size: 3vw;
 }
 
 #question_synopsis{
-font-weight: bold;
-font-family: arial;
-font-size: 3vw;
-color:darkgoldenrod;
+  text-align: center;
+  font-size:1.2em;
+color:darkorange;
 }
 html { 
 /*  background: url(../blackimg.jpg) no-repeat center center fixed; 
@@ -113,8 +104,8 @@ html {
           color: goldenrod;
           text-align: center;
           font-weight: bold;
-          font-family: arial;
-          font-size: 4vw;
+          font-size:2em;
+          margin:0.67em 
         
       }
 
@@ -129,8 +120,6 @@ p {
 form {
   display: inline-block;
     color: white;
-
-    
   
     display: -webkit-box;
     display: -webkit-flex;
@@ -161,17 +150,11 @@ input{
 #responseMessage {
 font-size: 3vw;
 color: #00FDFF;
-font-family: arial;
 margin-bottom:4%;
 text-align: center;
 
 }
 #questionsFrame{
-font-size: 4vw;
-color: #00FDFF;
-font-family: arial;
-margin-bottom:4%;
-text-align: center;
 }
 a {
     color: orange;
