@@ -1,57 +1,57 @@
 [  
  	{"question" : { 
 		"synopsis": "Do you know who created Pandora?",
-		"optionsA" : [ "yes","maybe"],
-		"optionsN" : [ "no", "nah"],
-		"lose_message": "Pandora was created by Hephastios, a metal smith known for his Automatons (metal sculptures who could think and act)."
+		"optionsA" : [ "yes, but I want to see if I am right","who?"],
+		"optionsN" : [ "I know I know", "I don't care"],
+		"lose_message": "Pandora was created by Hephaestus, a metal smith known for his Automatons (metal sculptures who could think and act)."
 	}}, 
 	{"question" : {
-		"synopsis": "Do you know why the Gods came to Hephastos to build her?",
-		"optionsA": [ "no, tell me"],
+		"synopsis": "Do you know why the Gods came to Hephaestus to build her?",
+		"optionsA": [ "No, tell me"],
 		"optionsN": ["I don't care. "],
-		"lose_message": "Becasue he was an awesome hardware dude, but also because man had stole fire and they worried this was elevating man to god like status."
+		"lose_message": "Becasue he was an awesome hardware dude (god of smiths and master of crafts), but also because man had stole fire and they worried this was elevating man to god like status."
 	}}, 
 	{"question" : {
 		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
+		"optionsA": ["Open to read rest"],
+		"optionsN": ["No thanks"],
 		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto, 1984."
 	}},
 	{"question" : {
 		"synopsis": "Closer at hand and perhaps equally decisive is another no less threatening event. This is the advent of automation, which in a few decades probably will empty the factories and liberate mankind from its oldest and most natural burden, the burden of laboring and the bondage to necessity. Here, too, a fundamental aspect of the human condition is at stake, but the rebellion against it, the wish to be liberated from labor's -toil and trouble,- is not modern but as old as recorded history. ",
 		"optionsA": ["who said this?"],
-		"optionsN": ["who care?"],
+		"optionsN": ["who cares."],
 		"lose_message": "Hannah Ardent, The Human Condition-1958"
 	}}, 
 	{"question" : {
-		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "Some scholars consider Pandora....",
+		"optionsA": ["The original Eve", "The 1st Cyborg", "both"],
+		"optionsN": ["Does it matter?"],
+		"lose_message": "Both, she was the first moral woman born but instead of being made from a rib of Adam she is made by the god of metal smiths."
 	}}, 
 	{"question" : {
-		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "Memory, Plotinus held, is for those who have forgotten. The doctrine is Platonic: For those who have forgotten, remembering is...",
+		"optionsA": ["1. a virtue", "2. a scourge", "3. a right of passage"],
+		"optionsN": ["let's move on"],
+		"lose_message": "...a virtue; but the perfect never lose the vision of truth and they have no need to remember. (Myth and Reality by Mircede Eliade 1963) "
 	}},
 	{"question" : {
-		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "In the original Pandora story by the Greek poet Hesoid from approximately 700 BCE, Pandora's box is actually a",
+		"optionsA": ["jar", "vase", "crate"],
+		"optionsN": ["I have no interest in guessing"],
+		"lose_message": "a jar!"
 	}}, 
 	{"question" : {
-		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "What are some other interesting aspects of Hephaestus, Pandoras creator...?",
+		"optionsA": ["Let's find out!"],
+		"optionsN": ["I am not interested in engaging with this question"],
+		"lose_message": "There are numerous interesting 'facts' about Hephaestus; including that he was differently abled and used golden crutches; he was an artist as well as inventor; he was married to Aphrodite."
 	}},
 	{"question" : {
-		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "An artist in residence at George Church’s genetics lab at Harvard Medical School inserted a Wikipeadia article into the DNA of what living thing?",
+		"optionsA": ["a mouse", "a peone", "an apple"],
+		"optionsN": ["I don't want to know"],
+		"lose_message": "The artwork by Joe Davis was entitled “Malus ecclesia.” The latin Malus means both “bad, evil” and “apple tree”. Davis put the wikipedia entry on good and evil into the inert biology of an apple, changing neither its taste nor appearance."
 	}},
 	{"question" : {
 		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
