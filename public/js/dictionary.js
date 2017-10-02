@@ -15,7 +15,7 @@ var dictionary = {
           messageHtml.fadeIn();
           messageHtml.html(guess + " was removed from the world, thank you.")
           messageHtml.fadeOut(7000);
-          play_clay();
+          play_whoosh();
         
         } else {
            messageHtml.fadeIn();
@@ -32,7 +32,7 @@ var movemotor = {
 
   
 }
-function play_clay() {
+function play_whoosh() {
 
    var audioElement = document.createElement('audio');//plays claybreak
           audioElement.setAttribute('src', 'http://www.artandscienceanalysisgroup.net/AutomatonImages/removesound.mp3');  //plays claybreak

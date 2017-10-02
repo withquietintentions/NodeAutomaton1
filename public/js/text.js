@@ -1,3 +1,5 @@
+//javascript
+
 $.get('/questions.json', function(data) {
 	console.log(data);
 	var statements_lose_version = data;
@@ -34,7 +36,11 @@ function startLoop(statements_lose_version) {
 		$urnOpening.text("urn will open...");
 		$playAgain.text("PLAY AGAIN");
 		play_clay();
+		open_urn();
+
 	});
+
+
 
 
 	function loadQuestion() {
@@ -76,6 +82,28 @@ function play_clay() {
           audioElement.setAttribute('src', 'http://www.artandscienceanalysisgroup.net/AutomatonImages/claybreakshort.mp3');  //plays claybreak
           audioElement.play();//plays clay break
 }
+
+///testing to send to app
+$.ajax({
+        type: 'POST',
+        data: JSON.stringify(data),
+       data: {
+            blob: {wob:"1",job:"2", ar:[1,2,{a:'b'}]}
+        }
+        contentType: "application/json",
+        //contentType: "application/x-www-form-urlencoded",
+        dataType:'json',
+        url: 'http://localhost:3000/notification',                      
+        success: function(data) {
+            console.log('success');
+            console.log(JSON.stringify(data));                               
+        },
+        error: function(error) {
+            console.log("some error in fetching the notifications");
+         }
+
+    });
+
 
 
 

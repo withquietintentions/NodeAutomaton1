@@ -9,7 +9,7 @@ var cors  = require("cors"); var app = express();
 var Particle = require('particle-api-js');
 var particle = new Particle();
 var token
-
+// var text = require("./public/js/text.js");
 var Datastore = require('nedb');
 app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
 app.use(express.static("./public"));//where my puvlic files can be found for web
@@ -31,6 +31,17 @@ function particle_blink() {
           console.log('An error occurred:', err);
       }); 
 }
+
+function particle_open() {
+    particle.callFunction({ deviceId: D_UID, name: 'open', auth: TOKEN }).then(
+      function (data) {
+          console.log('open called succesfully : ', data.body.return_value);
+      }, function (err) {
+          console.log('An error occurred:', err);
+      }); 
+}
+
+
 ///END OF PARICLE TEST
 
 
@@ -39,6 +50,14 @@ app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
+//trying to import an open state
+
+app.get('./public/js/text.js', function(req, res) {
+    console.log(req.body);
+});
+
+//end of trying to import an open state
 
 var dbGuesses = new Datastore({ filename: './db/guesses.db', autoload: true });
 app.post("/guess", function(req, res) {
