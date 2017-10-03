@@ -4,10 +4,10 @@
  */
 .ui-keyboard {
 	/* adjust overall keyboard size using "font-size" */
-	font-size: 10px;
+	font-size: 20px;
 	text-align: left;/*makes keyboard shift left*/
 	background: #fefefe;
-	border: 1px solid #aaa;
+	border: 0px solid #aaa;
 	padding: 10px;
 
 	/* include the following setting to place the
@@ -28,16 +28,16 @@
 	z-index: 16001;
 }
 button.ui-keyboard-button.btn {
-    padding: 1px 6px;
+    padding: 3px 6px;
 }
 .ui-keyboard-button {
 	border: 1px solid #aaa;
 	padding: 0 0.5em;
 	margin: 1px;
-	min-width: 1em;
-	max-width: 2.5em;
-	height: 2em;
-	line-height: 1em;
+	min-width: 3em;
+	max-width: 3em;
+	height: 3em;
+	line-height: 3em;
 	vertical-align: top;
 	font-family: Helvetica, Arial, sans-serif;
 	color: #333;
@@ -64,8 +64,8 @@ button.ui-keyboard-button.btn {
 }
 .ui-keyboard-button span {
 	display: block;
-	width: 100%;
-	font-size: 1.2em;/*font size of button text*/
+	width: 120%;
+	font-size: 1.6em;/*font size of button text*/
 	text-align: center;/*not it*/
 }
 /* make action keys extra-wide */
@@ -76,9 +76,9 @@ button.ui-keyboard-button.btn {
 	width: 15em;
 }
 .ui-keyboard-actionkey:not(.ui-keyboard-dec):not(.ui-keyboard-combo) span {
-	font-size: 1em;
+	font-size: 1.5em; /*size of action button text*/
 	position: relative;
-	top: -.3em;
+	top: -.2em;/*where action sits*/
 	left: -1em;
 }
 .ui-keyboard-placeholder {
@@ -97,7 +97,7 @@ button.ui-keyboard-button.btn {
 }
 .ui-keyboard-NBSP span, .ui-keyboard-ZWSP span, .ui-keyboard-ZWNJ span, .ui-keyboard-ZWJ span,
 .ui-keyboard-LRM span, .ui-keyboard-RLM span {
-	font-size: 0.5em;
+	font-size: 2em;
 	line-height: 1.5em;
 	white-space: normal;
 }
@@ -132,8 +132,8 @@ button.ui-keyboard-accept.ui-keyboard-invalid-input:not([disabled]):hover {
 }
 /* unlocked icon (keyboard enabled) */
 button.ui-keyboard-toggle span {
-	width: .9em;
-	height: .9em;
+	width: 1.5em;
+	height: 1.5em;
 	display: inline-block;
 	background-repeat: no-repeat;
 	background-position:center center;
@@ -179,13 +179,13 @@ button.ui-keyboard-toggle.ui-keyboard-disabled span {
 }
 
 /*** Extender keyboard extension ***/
-div.ui-keyboard-extender {
+/*div.ui-keyboard-extender {
 	margin-left: 5px;
 	margin-right: 10px;
-}
+}*/
 button.ui-keyboard-extender span {
-	width: .9em;
-	height: .9em;
+	width: 1.3em;
+	height: 2em;
 	display: inline-block;
 	margin-bottom: 3px;
 	background-repeat: no-repeat;
