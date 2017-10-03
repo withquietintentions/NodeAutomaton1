@@ -54,9 +54,9 @@
 		"lose_message": "The artwork by Joe Davis was entitled “Malus ecclesia.” The latin Malus means both “bad, evil” and “apple tree”. Davis put the wikipedia entry on good and evil into the inert biology of an apple, changing neither its taste nor appearance."
 	}},
 	{"question" : {
-		"synopsis": "last question here",
-		"optionsA": ["open to read rest"],
-		"optionsN": ["no thanks"],
-		"lose_message": "often exceedingly unfaithful to their origins. Their fathers, after all, are inessential - Donna Haraway A Cyborg Manifesto."
+		"synopsis": "For Hararway the cyborg is a feminist",
+		"optionsA": ["how?", "why?"],
+		"optionsN": ["does it matter?"],
+		"lose_message": "Patriarchal dualisms such as self/other, culture/nature, male/female, civilized/primitive, right/wrong, truth/illusion, total/partial, and God/man become entangled and dethroned by the technological coming of the cyborg."
 	}}
 ]

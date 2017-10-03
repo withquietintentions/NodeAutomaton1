@@ -34,13 +34,13 @@ button.ui-keyboard-button.btn {
 	border: 1px solid #aaa;
 	padding: 0 0.5em;
 	margin: 1px;
-	min-width: 3em;
+	min-width: 3em;/*where you can make keyboard bigger*/
 	max-width: 3em;
 	height: 3em;
 	line-height: 3em;
 	vertical-align: top;
 	font-family: Helvetica, Arial, sans-serif;
-	color: #333;
+	color: blue;
 	text-align: center; /*not it */
 	border-radius: 5px;
 	-webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
