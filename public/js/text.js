@@ -84,25 +84,9 @@ function play_clay() {
 }
 
 ///testing to send to app
-$.ajax({
-        type: 'POST',
-        data: JSON.stringify(data),
-       data: {
-            blob: {wob:"1",job:"2", ar:[1,2,{a:'b'}]}
-        }
-        contentType: "application/json",
-        //contentType: "application/x-www-form-urlencoded",
-        dataType:'json',
-        url: 'http://localhost:3000/notification',                      
-        success: function(data) {
-            console.log('success');
-            console.log(JSON.stringify(data));                               
-        },
-        error: function(error) {
-            console.log("some error in fetching the notifications");
-         }
-
-    });
+function open_urn(){
+//post here to app.js 
+}
 
 
 

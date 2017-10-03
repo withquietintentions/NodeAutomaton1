@@ -35,14 +35,18 @@ function particle_blink() {
 function particle_open() {
     particle.callFunction({ deviceId: D_UID, name: 'open', auth: TOKEN }).then(
       function (data) {
-          console.log('open called succesfully : ', data.body.return_value);
+          console.log('Open called succesfully : ', data.body.return_value);
       }, function (err) {
           console.log('An error occurred:', err);
       }); 
 }
 
-
-///END OF PARICLE TEST
+// HELP!!!
+///if button input from Particle 
+function buttonRedirect(){
+   
+  res.redirect('/opening.html')
+}
 
 
 var bodyParser = require('body-parser')
@@ -51,7 +55,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-//trying to import an open state
+// HELP!!
+//trying to import an openstate to send to Particle to move the motor open
 
 app.get('./public/js/text.js', function(req, res) {
     console.log(req.body);
@@ -77,7 +82,6 @@ app.post("/guess", function(req, res) {
           // if result is non null then there is a match
           // MATCH WAS FOUND!!!!!!!!!!!!
          particle_blink();
-
           res.send(guess);
         } else {
           // if no match
