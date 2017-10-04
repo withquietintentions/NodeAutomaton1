@@ -98,7 +98,7 @@ app.post("/openMax", function(req, res) {
 });
 
 
-var dbGuesses = new Datastore({ filename: './db/guesses.db', autoload: true });
+var dbGuesses = new Datastore({ filename: './db/guesses.json', autoload: true });
 app.post("/guess", function(req, res) {
     var guess = req.body.guess;
     var guessCleanedUp = guess.trim().toLowerCase();
