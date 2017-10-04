@@ -67,6 +67,12 @@ app.get('./public/js/text.js', function(req, res) {
 app.post("/open_urn", function(req, res) {
   console.log("opening urn!!!");
   particle_open();
+  res.send();
+});
+
+app.post("/testwebhook", function(req, res) {
+  console.log("testwebook!");
+  res.send("hello zoe");
 });
 
 
