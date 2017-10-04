@@ -122,7 +122,7 @@ app.post("/guess", function(req, res) {
           } else {
             particle_blink();
           }
-          res.send({guess: guess, atMaximum:atMaximum);
+          res.send({guess: guess, atMaximum:atMaximum});
         } else {
           // if no match
           res.send(null);
