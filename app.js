@@ -195,29 +195,6 @@ function getTopTenFromCounter(counter) {
 
 const server = http.createServer(app);
 
-//const WebSocket = require('ws');
-//var wss = new WebSocket.Server({ server });
-////if (process.env.NODE_ENV && process.env.NODE_ENV == 'production') {
-////  ws = new WebSocket('wss://automaton-urn.herokuapp.com');
-////} else {
-////  var port = process.env.PORT || 3000;
-////  ws = new WebSocket('ws://localhost:' + port);
-////}
-//
-////app.listen(app.get('port'), function() {
-////  console.log('Node app is running on port', app.get('port'));
-////});//tells me I can go to localhost 3000 to find my page in the browser
-//wss.on('connection', function connection(ws, req) {
-//  console.log('websocket connected!!');
-//  sockets.push(ws);
-//
-//  ws.on('message', function incoming(message) {
-//    console.log('received: %s', message);
-//  });
-//
-//  ws.send('something');
-//});
-//
 server.listen(app.get('port'), function listening() {
   console.log('Listening on %d', app.get('port'));
 });

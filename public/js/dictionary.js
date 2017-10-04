@@ -11,11 +11,14 @@ var dictionary = {
     $.post("/guess", {guess: guess})
       .done(function(data) {
         console.log("data", data);
-        if (data && data.length > 0) {
+        if (data && data.guess && data.guess.length > 0) {
           messageHtml.fadeIn();
           messageHtml.html(guess + " was removed from the world, thank you.")
           messageHtml.fadeOut(7000);
           play_whoosh();
+          if (data.atMaximum) {
+            window.location = "https://automaton-urn.herokuapp.com/opening.html";
+          } 
         
         } else {
            messageHtml.fadeIn();
