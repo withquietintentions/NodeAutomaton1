@@ -15,6 +15,13 @@ app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
 app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
 
+
+var trackButtons = {
+  hit: null,
+  status: null
+};
+
+
 //TESTING PARTICLE IN HERE
 //NodeJS code for using Photon variable
 var Particle = require('particle-api-js');
@@ -66,13 +73,27 @@ app.get('./public/js/text.js', function(req, res) {
 
 app.post("/open_urn", function(req, res) {
   console.log("opening urn!!!");
-  particle_open();
-  res.send();
+  if (trackButtons.hit) {
+    // track button has been hit so need to go in opposite direction
+    trackButtons.hit = false;
+    res.send({atMaximum: true});
+  } else {
+    particle_open();
+    res.send({atMaximum: false});
+  }
 });
 
-app.post("/buttonHit", function(req, res) {
-  console.log("Button HIT!!!!");
-  
+app.post("/closedMax", function(req, res) {
+  console.log("Closed max Button HIT!!!!");
+  trackButtons.hit = true;
+  trackButtons.status = 'opening';
+  res.send("done");
+});
+
+app.post("/openMax", function(req, res) {
+  console.log("OPen max Button HIT!!!!");
+  trackButtons.hit = true;
+  trackButtons.status = 'closing';
   res.send("done");
 });
 
@@ -174,28 +195,29 @@ function getTopTenFromCounter(counter) {
 
 const server = http.createServer(app);
 
-const WebSocket = require('ws');
-var wss = new WebSocket.Server({ server });
-//if (process.env.NODE_ENV && process.env.NODE_ENV == 'production') {
-//  ws = new WebSocket('wss://automaton-urn.herokuapp.com');
-//} else {
-//  var port = process.env.PORT || 3000;
-//  ws = new WebSocket('ws://localhost:' + port);
-//}
-
-//app.listen(app.get('port'), function() {
-//  console.log('Node app is running on port', app.get('port'));
-//});//tells me I can go to localhost 3000 to find my page in the browser
-wss.on('connection', function connection(ws, req) {
-  console.log('req:', req);
-
-  ws.on('message', function incoming(message) {
-    console.log('received: %s', message);
-  });
-
-  ws.send('something');
-});
-
+//const WebSocket = require('ws');
+//var wss = new WebSocket.Server({ server });
+////if (process.env.NODE_ENV && process.env.NODE_ENV == 'production') {
+////  ws = new WebSocket('wss://automaton-urn.herokuapp.com');
+////} else {
+////  var port = process.env.PORT || 3000;
+////  ws = new WebSocket('ws://localhost:' + port);
+////}
+//
+////app.listen(app.get('port'), function() {
+////  console.log('Node app is running on port', app.get('port'));
+////});//tells me I can go to localhost 3000 to find my page in the browser
+//wss.on('connection', function connection(ws, req) {
+//  console.log('websocket connected!!');
+//  sockets.push(ws);
+//
+//  ws.on('message', function incoming(message) {
+//    console.log('received: %s', message);
+//  });
+//
+//  ws.send('something');
+//});
+//
 server.listen(app.get('port'), function listening() {
   console.log('Listening on %d', app.get('port'));
 });

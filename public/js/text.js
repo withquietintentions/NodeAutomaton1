@@ -1,9 +1,4 @@
 //javascript
-var socket = new WebSocket("wss://automaton-urn.herokuapp.com", "protocolOne");
-socket.onopen = function (event) {
-  socket.send("Here's some text that the server is urgently awaiting!"); 
-};
-
 $.get('/questions.json', function(data) {
 	console.log(data);
 	var statements_lose_version = data;
@@ -95,11 +90,7 @@ function open_urn(){
     .done(function(data) {
         if (data && data.atMaximum) {
           // at the maximum
+          window.location = "https://automaton-urn.herokuapp.com";
         }
      });
 }
-
-
-
-
- 
