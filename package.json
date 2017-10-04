@@ -19,7 +19,8 @@
     "nedb": "^1.8.0",
     "openssl": "^1.1.0",
     "particle-api-js": "^6.5.0",
-    "virtual-keyboard": "^1.27.0-beta"
+    "virtual-keyboard": "^1.27.0-beta",
+    "ws": "^3.2.0"
   },
   "devDependencies": {},
   "scripts": {
