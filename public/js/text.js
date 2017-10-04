@@ -1,4 +1,18 @@
 //javascript
+var switchToCloseMode = false;
+setInterval(function() {
+  $.post('/checkTrackStatus', function(data) {
+    if (data && data == 'closing') {
+      switchToCloseMode = true;
+      window.location = "http://localhost:3000";
+    } else if (data && data == 'opening') {
+      switchToCloseMode = false;
+    }
+
+  });
+}, 10000);
+
+
 $.get('/questions.json', function(data) {
 	console.log(data);
 	var statements_lose_version = data;
@@ -90,7 +104,8 @@ function open_urn(){
     .done(function(data) {
         if (data && data.atMaximum) {
           // at the maximum
-          window.location = "https://automaton-urn.herokuapp.com";
+          console.log('here');
+          //window.location = "https://automaton-urn.herokuapp.com";
         }
      });
 }

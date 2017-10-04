@@ -1,5 +1,17 @@
 
 //javascript
+var switchToOpenMode = false;
+setInterval(function() {
+  $.post('/checkTrackStatus', function(data) {
+    if (data && data == 'opening') {
+      switchToOpenMode = true;
+      window.location = "http://localhost:3000/opening.html";
+    } else if (data && data == 'closing') {
+      switchToOpenMode = false;
+    }
+
+  });
+}, 10000);
 
 var dictionary = {
   onRemove: function(ev) {
@@ -23,7 +35,7 @@ var dictionary = {
           messageHtml.fadeOut(7000);
         } 
         if (data && data.atMaximum) {
-          window.location = "https://automaton-urn.herokuapp.com/opening.html";
+      //    window.location = "https://automaton-urn.herokuapp.com/opening.html";
         }
       });;
      

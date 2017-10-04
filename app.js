@@ -1,5 +1,14 @@
 // Automaton
 // Node
+var SerialPort = require('serialport');
+var port = new SerialPort(process.argv[2] || '/dev/cu.usbmodem1411', {
+  baudRate: 9600
+});
+SerialPort.list(function (err, ports) {
+  ports.forEach(function(port) {
+    console.log(port.comName);
+  });
+});
 require('dotenv').config();//getting token and id for api
 var http = require('http');
 var fs = require('fs');
@@ -15,10 +24,10 @@ app.set('port', (process.env.PORT || 3000));//sets it for local or Heroku
 app.use(express.static("./public"));//where my puvlic files can be found for web
 app.use(cors());
 
+var trackStatus = null;
 
 var trackButtons = {
-  hit: null,
-  status: null
+  hit: null
 };
 
 
@@ -30,23 +39,23 @@ const TOKEN = process.env.TOKEN;
 const D_UID = process.env.D_UID;
 
 
-function particle_close() {
-    particle.callFunction({ deviceId: D_UID, name: 'blink', auth: TOKEN }).then(
-      function (data) {
-          console.log('Blink called succesfully : ', data.body.return_value);
-      }, function (err) {
-          console.log('An error occurred:', err);
-      }); 
-}
+//function particle_close() {
+//    particle.callFunction({ deviceId: D_UID, name: 'blink', auth: TOKEN }).then(
+//      function (data) {
+//          console.log('Blink called succesfully : ', data.body.return_value);
+//      }, function (err) {
+//          console.log('An error occurred:', err);
+//      }); 
+//}
 
-function particle_open() {
-    particle.callFunction({ deviceId: D_UID, name: 'open', auth: TOKEN }).then(
-      function (data) {
-          console.log('Open called succesfully : ', data.body.return_value);
-      }, function (err) {
-          console.log('An error occurred:', err);
-      }); 
-}
+//function particle_open() {
+//    particle.callFunction({ deviceId: D_UID, name: 'open', auth: TOKEN }).then(
+//      function (data) {
+//          console.log('Open called succesfully : ', data.body.return_value);
+//      }, function (err) {
+//          console.log('An error occurred:', err);
+//      }); 
+//}
 
 // HELP!!!
 ///if button input from Particle 
@@ -73,33 +82,49 @@ app.get('./public/js/text.js', function(req, res) {
 
 app.post("/open_urn", function(req, res) {
   console.log("opening urn!!!");
-  if (trackButtons.hit) {
-    // track button has been hit so need to go in opposite direction
-    trackButtons.hit = false;
-    console.log(trackButtons);
+  if (trackStatus == 'closing') {
     res.send({atMaximum: true});
   } else {
-    console.log(trackButtons);
     res.send({atMaximum: false});
-    particle_open();
+    port.write('o');
   }
 });
 
-app.post("/closedMax", function(req, res) {
-  console.log("Closed max Button HIT!!!!");
-  trackButtons.hit = true;
-  trackButtons.status = 'opening';
-  console.log(trackButtons);
-  res.send("done");
+//app.post("/closedMax", function(req, res) {
+//  console.log("Closed max Button HIT!!!!");
+//  trackButtons.hit = true;
+//  trackButtons.status = 'opening';
+//  console.log(trackButtons);
+//  res.send("done");
+//});
+
+app.post("/checkTrackStatus", function(req, res) {
+  console.log('trackStatus', trackStatus);
+  res.send(trackStatus);
+  port.write('s');
 });
 
-app.post("/openMax", function(req, res) {
-  console.log("OPen max Button HIT!!!!");
-  trackButtons.hit = true;
-  trackButtons.status = 'closing';
-  console.log(trackButtons);
-  res.send("done");
+port.on('data', function (data) {
+  //console.log('Data:', data.toString());
+  var dataString = data.toString();
+  if (dataString == 'b') {
+    console.log("in closing direction");
+    trackStatus = 'closing';
+  } else if (dataString == 'a') {
+    console.log("in opening direction!");
+    trackStatus = 'opening';
+  }
 });
+
+
+
+//app.post("/openMax", function(req, res) {
+//  console.log("OPen max Button HIT!!!!");
+//  trackButtons.hit = true;
+//  trackButtons.status = 'closing';
+//  console.log(trackButtons);
+//  res.send("done");
+//});
 
 
 var dbGuesses = new Datastore({ filename: './db/guesses.json', autoload: true });
@@ -119,25 +144,18 @@ app.post("/guess", function(req, res) {
           console.log("removed!: ", result);
           // if result is non null then there is a match
           // MATCH WAS FOUND!!!!!!!!!!!!
-          var atMaximum = false;
-          if (trackButtons.hit) {
-            trackButtons.hit = false;
-            atMaximum = true; 
-            res.send({guess: guess, atMaximum:atMaximum});
+          if (trackStatus == 'opening') {
+            res.send({guess: guess, atMaximum: true});
           } else {
-            res.send({guess: guess, atMaximum:atMaximum});
-            particle_close();
+            res.send({guess: guess, atMaximum: false});
+            port.write('c');
           }
-          console.log(trackButtons);
         } else {
-          var atMaximum = false;
-          if (trackButtons.hit) {
-            trackButtons.hit = false;
-            atMaximum = true; 
+          if (trackStatus == 'opening') {
+            res.send({atMaximum: true});
+          } else {
+            res.send({atMaximum: false});
           }
-          // if no match
-          console.log(trackButtons);
-          res.send({atMaximum: atMaximum});
         }
       }, 
       function(err) {
