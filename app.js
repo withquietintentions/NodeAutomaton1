@@ -187,7 +187,7 @@ var wss = new WebSocket.Server({ server });
 //  console.log('Node app is running on port', app.get('port'));
 //});//tells me I can go to localhost 3000 to find my page in the browser
 wss.on('connection', function connection(ws, req) {
-  const location = url.parse(req.url, true);
+  console.log('req:', req);
 
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
