@@ -185,7 +185,7 @@ function insertGuessIntoDb(guess, success, failure) {
 }
 
 function checkTopWords(numbers, freqs, guessCleanedUp) {
-  var topWords = 5;
+  var topWords = 10;
   for (var i = 0; i < numbers.length; i++) {
     var list = freqs[numbers[i]];
     for (var j = 0; j < list.length; j++) {
