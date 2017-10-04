@@ -76,9 +76,11 @@ app.post("/open_urn", function(req, res) {
   if (trackButtons.hit) {
     // track button has been hit so need to go in opposite direction
     trackButtons.hit = false;
+    console.log(trackButtons);
     res.send({atMaximum: true});
   } else {
     particle_open();
+    console.log(trackButtons);
     res.send({atMaximum: false});
   }
 });
@@ -87,6 +89,7 @@ app.post("/closedMax", function(req, res) {
   console.log("Closed max Button HIT!!!!");
   trackButtons.hit = true;
   trackButtons.status = 'opening';
+  console.log(trackButtons);
   res.send("done");
 });
 
@@ -94,6 +97,7 @@ app.post("/openMax", function(req, res) {
   console.log("OPen max Button HIT!!!!");
   trackButtons.hit = true;
   trackButtons.status = 'closing';
+  console.log(trackButtons);
   res.send("done");
 });
 
@@ -122,6 +126,7 @@ app.post("/guess", function(req, res) {
           } else {
             particle_blink();
           }
+          console.log(trackButtons);
           res.send({guess: guess, atMaximum:atMaximum});
         } else {
           var atMaximum = false;
@@ -130,6 +135,7 @@ app.post("/guess", function(req, res) {
             atMaximum = true; 
           }
           // if no match
+          console.log(trackButtons);
           res.send({atMaximum: atMaximum});
         }
       }, 
