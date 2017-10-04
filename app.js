@@ -115,8 +115,14 @@ app.post("/guess", function(req, res) {
           console.log("removed!: ", result);
           // if result is non null then there is a match
           // MATCH WAS FOUND!!!!!!!!!!!!
-         particle_blink();
-          res.send(guess);
+          var atMaximum = false;
+          if (trackButtons.hit) {
+            trackButtons.hit = false;
+            atMaximum = true; 
+          } else {
+            particle_blink();
+          }
+          res.send({guess: guess, atMaximum:atMaximum);
         } else {
           // if no match
           res.send(null);
