@@ -1,5 +1,5 @@
 //javascript
-var socket = new WebSocket("wss:https://automaton-urn.herokuapp.com", "protocolOne");
+var socket = new WebSocket("wss://automaton-urn.herokuapp.com", "protocolOne");
 socket.onopen = function (event) {
   socket.send("Here's some text that the server is urgently awaiting!"); 
 };
