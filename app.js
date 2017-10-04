@@ -124,8 +124,13 @@ app.post("/guess", function(req, res) {
           }
           res.send({guess: guess, atMaximum:atMaximum});
         } else {
+          var atMaximum = false;
+          if (trackButtons.hit) {
+            trackButtons.hit = false;
+            atMaximum = true; 
+          }
           // if no match
-          res.send(null);
+          res.send({atMaximum: atMaximum});
         }
       }, 
       function(err) {

@@ -16,15 +16,15 @@ var dictionary = {
           messageHtml.html(guess + " was removed from the world, thank you.")
           messageHtml.fadeOut(7000);
           play_whoosh();
-          if (data.atMaximum) {
-            window.location = "https://automaton-urn.herokuapp.com/opening.html";
-          } 
         
         } else {
            messageHtml.fadeIn();
           messageHtml.html("Sorry not enough ppl requested " + guess + " to be removed from the world yet.");
           messageHtml.fadeOut(7000);
         } 
+        if (data && data.atMaximum) {
+          window.location = "https://automaton-urn.herokuapp.com/opening.html";
+        }
       });;
      
   }
