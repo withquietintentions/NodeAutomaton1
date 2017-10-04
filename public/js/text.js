@@ -86,6 +86,13 @@ function play_clay() {
 ///testing to send to app
 function open_urn(){
 //post here to app.js 
+  console.log("opening urn...");
+  $.post('/open_urn')
+    .done(function(data) {
+        if (data && data.atMaximum) {
+          // at the maximum
+        }
+     });
 }
 
 

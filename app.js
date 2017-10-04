@@ -64,6 +64,12 @@ app.get('./public/js/text.js', function(req, res) {
 
 //end of trying to import an open state
 
+app.post("/open_urn", function(req, res) {
+  console.log("opening urn!!!");
+  particle_open();
+});
+
+
 var dbGuesses = new Datastore({ filename: './db/guesses.db', autoload: true });
 app.post("/guess", function(req, res) {
     var guess = req.body.guess;
