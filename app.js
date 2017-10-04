@@ -30,7 +30,7 @@ const TOKEN = process.env.TOKEN;
 const D_UID = process.env.D_UID;
 
 
-function particle_blink() {
+function particle_close() {
     particle.callFunction({ deviceId: D_UID, name: 'blink', auth: TOKEN }).then(
       function (data) {
           console.log('Blink called succesfully : ', data.body.return_value);
@@ -79,9 +79,9 @@ app.post("/open_urn", function(req, res) {
     console.log(trackButtons);
     res.send({atMaximum: true});
   } else {
-    particle_open();
     console.log(trackButtons);
     res.send({atMaximum: false});
+    particle_open();
   }
 });
 
@@ -123,11 +123,12 @@ app.post("/guess", function(req, res) {
           if (trackButtons.hit) {
             trackButtons.hit = false;
             atMaximum = true; 
+            res.send({guess: guess, atMaximum:atMaximum});
           } else {
-            particle_blink();
+            res.send({guess: guess, atMaximum:atMaximum});
+            particle_close();
           }
           console.log(trackButtons);
-          res.send({guess: guess, atMaximum:atMaximum});
         } else {
           var atMaximum = false;
           if (trackButtons.hit) {
