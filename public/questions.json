@@ -27,7 +27,7 @@
 		"synopsis": "Some scholars consider Pandora....",
 		"optionsA": ["The original Eve", "The 1st Cyborg", "both"],
 		"optionsN": ["Does it matter?"],
-		"lose_message": "Both, she was the first moral woman born but instead of being made from a rib of Adam she is made by the god of metal smiths."
+		"lose_message": "Both, she was the first mortal woman born but instead of being made from a rib of Adam she is made by the god of metal smiths."
 	}}, 
 	{"question" : {
 		"synopsis": "Memory, Plotinus held, is for those who have forgotten. The doctrine is Platonic: For those who have forgotten, remembering is...",
