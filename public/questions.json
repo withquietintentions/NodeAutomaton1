@@ -9,7 +9,7 @@
 		"synopsis": "Do you know why the Gods came to Hephaestus to build her?",
 		"optionsA": [ "No, tell me"],
 		"optionsN": ["I don't care. "],
-		"lose_message": "Becasue he was an awesome hardware dude (god of smiths and master of crafts), but also because man had stole fire and they worried this was elevating man to god like status."
+		"lose_message": "Because he was an awesome hardware dude (god of smiths and master of crafts), but also because man had stole fire and they worried this was elevating man to god like status."
 	}}, 
 	{"question" : {
 		"synopsis": "The main trouble with cyborgs is that they are the illegitimate offspring of militarism and patriarchal capitalism, but illegitimate offspring are...",
